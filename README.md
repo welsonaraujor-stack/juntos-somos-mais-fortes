@@ -1,5 +1,5 @@
 # juntos-somos-mais-fortes
-App para aumentar a disponibilidade de bolsas de sangue
+App para aumentar a disponibilidade de bolsas de sangue 
 # 🩸 JUNTOS SOMOS MAIS FORTES
 
 > Uma doação pode salvar muitas vidas.
