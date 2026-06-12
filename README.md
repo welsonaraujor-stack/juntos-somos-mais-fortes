@@ -4,7 +4,7 @@ App para aumentar a disponibilidade de bolsas de sangue
 
 > Uma doação pode salvar muitas vidas.
 
-## Sobre o Projeto
+## Sobre o Projeto.
 
 O projeto Juntos Somos Mais Fortes nasceu com o objetivo de aumentar a disponibilidade de bolsas de sangue através da união entre tecnologia, mobilização social e unidades móveis de coleta.
 
