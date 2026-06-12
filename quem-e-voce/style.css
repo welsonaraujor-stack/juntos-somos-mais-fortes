@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#f5f5f5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.container{
+
+    width:400px;
+}
+
+.card-principal{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+}
+
+h1{
+
+    text-align:center;
+
+    color:#222;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+}
+
+.opcao{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    border:1px solid #e5e5e5;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.opcao:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 5px 12px rgba(0,0,0,0.08);
+}
+
+.icone{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+}
+
+.pessoa .icone{
+
+    color:#d90012;
+}
+
+.grupo .icone{
+
+    color:#ff8c00;
+}
+
+.instituicao .icone{
+
+    color:#0d6efd;
+}
+
+.parceiro .icone{
+
+    color:#6f42c1;
+}
+
+.opcao h2{
+
+    font-size:22px;
+
+    color:#222;
+}
+
+.opcao span{
+
+    color:#555;
+
+    font-size:14px;
+}
+
+.rodape{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
+}
+
+.rodape i{
+
+    margin-left:5px;
+
+    color:#555;
+}
