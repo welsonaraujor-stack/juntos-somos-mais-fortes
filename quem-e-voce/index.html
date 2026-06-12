@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quem é Você?</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card-principal">
+
+        <h1>Como deseja participar?</h1>
+
+        <p class="subtitulo">
+            Escolha uma opção para continuar
+        </p>
+
+        <div class="opcao pessoa" onclick="selecionar('Pessoa')">
+
+            <div class="icone">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div>
+                <h2>PESSOA</h2>
+                <span>Quero doar sangue</span>
+            </div>
+
+        </div>
+
+        <div class="opcao grupo" onclick="selecionar('Grupo')">
+
+            <div class="icone">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div>
+                <h2>GRUPO</h2>
+                <span>Represento um grupo ou comunidade</span>
+            </div>
+
+        </div>
+
+        <div class="opcao instituicao" onclick="selecionar('Instituição')">
+
+            <div class="icone">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <div>
+                <h2>INSTITUIÇÃO</h2>
+                <span>Represento uma empresa, escola ou organização</span>
+            </div>
+
+        </div>
+
+        <div class="opcao parceiro" onclick="selecionar('Parceiro')">
+
+            <div class="icone">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div>
+                <h2>PARCEIRO</h2>
+                <span>Quero apoiar e fazer parte desta causa</span>
+            </div>
+
+        </div>
+
+        <div class="rodape">
+
+            <span>
+                Você poderá alterar depois.
+            </span>
+
+            <i class="fa-solid fa-circle-info"></i>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
