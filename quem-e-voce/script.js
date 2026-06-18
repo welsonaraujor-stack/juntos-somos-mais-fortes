@@ -27,5 +27,16 @@ function selecionar(tipo){
         "../grupo/index.html";
 
     }
+    
+       if(tipo === "Instituição"){
+    window.location.href =
+    "../instituicao/index.html";
+    
+    }
 
+    if(tipo === "Parceiro"){
+    window.location.href =
+    "../parceiro/index.html";
+    
+    }
 }
