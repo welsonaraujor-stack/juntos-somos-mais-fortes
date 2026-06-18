@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.container{
+    width:400px;
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+}
+
+.voltar{
+    color:#222;
+    font-size:20px;
+    text-decoration:none;
+}
+
+.perfil{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:15px;
+}
+
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#eef4ff;
+    color:#0d5cff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+}
+
+.perfil h2{
+    color:#0d5cff;
+}
+
+.perfil span{
+    font-size:12px;
+    color:#555;
+}
+
+.banner{
+    margin-top:20px;
+    border:1px solid #b8ceff;
+    background:#f6f9ff;
+    border-radius:10px;
+    padding:15px;
+
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.banner i{
+    color:#0d5cff;
+    font-size:24px;
+}
+
+.banner p{
+    font-size:13px;
+}
+
+h3{
+    color:#0d5cff;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.campo{
+    position:relative;
+    margin-bottom:8px;
+}
+
+.campo i{
+    position:absolute;
+    left:12px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#0d5cff;
+}
+
+.campo input{
+    width:100%;
+    height:42px;
+
+    border:1px solid #ddd;
+    border-radius:6px;
+
+    padding-left:40px;
+}
+
+.funcionalidades{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.card i{
+    color:#0d5cff;
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.card span{
+    font-size:11px;
+    display:block;
+}
+
+button{
+    width:100%;
+    height:50px;
+
+    margin-top:20px;
+
+    background:#0d5cff;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
