@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Pré-Triagem</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topo">
+
+        <div class="icone">
+
+            <i class="fa-solid fa-clipboard-check"></i>
+
+        </div>
+
+        <div>
+
+            <h2>Pré-triagem</h2>
+
+            <p>
+                Responda as perguntas para
+                verificar se você está apto a doar.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="contador">
+
+        <span id="numero">
+            1 de 8
+        </span>
+
+    </div>
+
+    <div class="progresso">
+
+        <div class="bolinha ativa"></div>
+        <div class="bolinha "></div>
+
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+
+    </div>
+
+    <h1 id="pergunta">
+
+        Você pesa mais de 50 kg?
+
+    </h1>
+
+    <div class="imagem">
+    <img src="imagens/balanca.png" alt="Balança">
+    </div>
+
+    <div class="botoes">
+
+        <button
+        class="sim"
+        onclick="responder(true)">
+
+            <i class="fa-solid fa-check"></i>
+
+            SIM
+
+        </button>
+
+        <button
+        class="nao"
+        onclick="responder(false)">
+
+            <i class="fa-solid fa-times"></i>
+
+            NÃO
+
+        </button>
+
+    </div>
+
+    <div class="aviso">
+
+    <i class="fa-solid fa-circle-info"></i>
+
+    Suas respostas são confidenciais
+    e muito importantes.
+
+    </div>
+
+</div>
