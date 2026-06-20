@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agendamento Confirmado</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="sucesso">
+
+        <i class="fa-solid fa-check"></i>
+
+    </div>
+
+    <h1>
+
+        Agendamento
+        Confirmado!
+
+    </h1>
+
+    <p>
+
+        Sua doação foi agendada com sucesso.
+
+    </p>
+
+    <div class="detalhes">
+
+        <h3>📍 Local</h3>
+
+        <span>
+            Parque Ibirapuera
+        </span>
+
+        <h3>📅 Data</h3>
+
+        <span>
+            10/06/2026
+        </span>
+
+        <h3>🕒 Horário</h3>
+
+        <span>
+            08:00
+        </span>
+
+    </div>
+
+    <div class="qr">
+
+        <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=JUNTOS-SOMOS-MAIS-FORTES">
+
+    </div>
+
+    <p class="info">
+
+        Apresente este QR Code
+        na chegada à unidade.
+
+    </p>
+
+    <button
+    onclick="adicionarAgenda()">
+
+        Adicionar à Agenda
+
+    </button>
+
+    <button
+    class="secundario"
+    onclick="voltarInicio()">
+
+        Voltar ao Início
+
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
