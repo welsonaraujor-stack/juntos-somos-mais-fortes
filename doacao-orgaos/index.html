@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Doação de Órgãos</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Doação de Órgãos</h2>
+
+    <div class="icone">
+
+        <i class="fa-solid fa-hand-holding-heart"></i>
+
+    </div>
+
+    <h3>
+        A doação de órgãos
+        salva vidas.
+    </h3>
+
+    <p>
+        Deseja registrar seu interesse
+        em ser doador de órgãos?
+    </p>
+
+    <div class="opcao selecionado"
+    onclick="selecionar('sim')"
+    id="sim">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>Sim, quero ser doador</span>
+
+    </div>
+
+    <div class="opcao"
+    onclick="selecionar('nao')"
+    id="nao">
+
+        <i class="fa-regular fa-circle"></i>
+
+        <span>Não desejo me registrar</span>
+
+    </div>
+
+    <button onclick="continuar()">
+
+        Continuar
+
+    </button>
+
+    <div class="info">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        Saiba mais sobre doação de órgãos
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
