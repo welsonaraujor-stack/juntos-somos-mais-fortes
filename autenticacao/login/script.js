@@ -1,89 +1,108 @@
-// ===== Mostrar/Ocultar Senha =====
+// ========================================
+// MOSTRAR / OCULTAR SENHA
+// ========================================
 
+// Captura o campo senha
 const senha =
 document.getElementById("senha");
 
+// Captura o ícone do olho
 const olho =
 document.getElementById("olho");
 
+// Ao clicar no olho
 olho.addEventListener("click", () => {
 
+    // Se a senha estiver escondida
     if (senha.type === "password") {
 
+        // Mostra a senha
         senha.type = "text";
 
+        // Troca o emoji
         olho.textContent = "🙈";
 
     } else {
 
+        // Esconde a senha novamente
         senha.type = "password";
 
+        // Volta para o olho normal
         olho.textContent = "👁️";
+
     }
 
 });
 
 
-// ===== Validação Login =====
+// ========================================
+// VALIDAÇÃO DE LOGIN
+// ========================================
 
+// Captura o botão Entrar
 const botaoEntrar =
 document.getElementById("entrar");
 
+// Quando clicar no botão Entrar
 botaoEntrar.addEventListener("click", () => {
 
+    // Captura o e-mail digitado
     const email =
     document.getElementById("email").value;
 
+    // Captura a senha digitada
     const senhaDigitada =
     document.getElementById("senha").value;
 
+    // Verifica se o e-mail está vazio
     if (email === "") {
 
-        alert("Digite seu e-mail ou CPF.");
+        alert(
+            "Digite seu e-mail ou CPF."
+        );
 
         return;
+
     }
 
+    // Verifica se a senha está vazia
     if (senhaDigitada === "") {
 
-        alert("Digite sua senha.");
+        alert(
+            "Digite sua senha."
+        );
 
         return;
+
     }
 
-    
-    //== alert("Login realizado com sucesso!");== (foi atualizado para seguir a pagina quem é você 21/06/2026)==
+    // ====================================
+    // LOGIN APROVADO
+    // ====================================
 
-    // Login aprovado
-    // Salva o nome temporariamente
-
+    // Salva o usuário temporariamente
     localStorage.setItem(
-    "usuario",
-    email
+        "usuario",
+        email
     );
 
+    // Redireciona para a tela
+    // de Pré-Cadastro
     window.location.href =
-    "../quem-e-voce/index.html";
-    const usuario = localStorage.getItem("usuario");
-
-    if (usuario) {
-
-    document.getElementById(
-        "nomeUsuario"
-    ).innerText = "Olá, " + usuario;
-
-    }
-
-    
+    "../pre-cadastro/index.html";
 
 });
 
 
-// ===== Botão Google =====
+// ========================================
+// BOTÃO GOOGLE
+// ========================================
 
+// Captura o botão Google
 const google =
 document.querySelector(".google");
 
+// Quando clicar no botão Google
 google.addEventListener("click", () => {
 
     alert(

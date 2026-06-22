@@ -1,3 +1,25 @@
+// ============================
+// RECUPERA USUÁRIO DO LOGIN
+// ============================
+
+const usuario =
+localStorage.getItem("usuario");
+
+const campoEmail =
+document.getElementById("email");
+
+if(usuario && campoEmail){
+
+    campoEmail.value =
+    usuario;
+
+    campoEmail.readOnly =
+    true;
+
+}
+
+
+
 // =====================
 // BOTÃO CONTINUAR
 // =====================
@@ -72,3 +94,4 @@ continuar.addEventListener("click", () => {
     "../quem-e-voce/index.html";
 
 });
+
