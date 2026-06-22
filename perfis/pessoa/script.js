@@ -13,3 +13,16 @@ botao.addEventListener("click", () => {
     // "pre-triagem.html";
 
 });
+// ============================
+// CARREGAR USUÁRIO LOGADO
+// ============================
+
+const usuario = localStorage.getItem("usuario");
+
+if(usuario){
+
+    document.getElementById(
+        "nomeUsuario"
+    ).innerText = usuario;
+
+}

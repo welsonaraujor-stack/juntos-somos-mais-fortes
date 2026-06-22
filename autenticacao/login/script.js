@@ -55,8 +55,26 @@ botaoEntrar.addEventListener("click", () => {
     //== alert("Login realizado com sucesso!");== (foi atualizado para seguir a pagina quem é você 21/06/2026)==
 
     // Login aprovado
+    // Salva o nome temporariamente
+
+    localStorage.setItem(
+    "usuario",
+    email
+    );
+
     window.location.href =
-    "../autenticacao/quem-e-voce/index.html";
+    "../quem-e-voce/index.html";
+    const usuario = localStorage.getItem("usuario");
+
+    if (usuario) {
+
+    document.getElementById(
+        "nomeUsuario"
+    ).innerText = "Olá, " + usuario;
+
+    }
+
+    
 
 });
 
