@@ -73,3 +73,19 @@ function voltarInicio(){
     "../../autenticacao/login/index.html";
 
 }
+const agendamento = {
+
+    nome: localStorage.getItem("nome"),
+
+    unidade: localStorage.getItem("unidade"),
+
+    data: localStorage.getItem("dataDoacao"),
+
+    horario: localStorage.getItem("horarioDoacao")
+
+};
+
+localStorage.setItem(
+    "agendamentoAtual",
+    JSON.stringify(agendamento)
+);

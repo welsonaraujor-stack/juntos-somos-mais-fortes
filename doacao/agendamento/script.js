@@ -3,9 +3,77 @@
 // =====================================
 
 // Horário selecionado
+// ==============================
+// CARREGAR UNIDADE ESCOLHIDA
+// ==============================
 
+const unidade =
+localStorage.getItem("unidade");
 
-let horarioSelecionado = "";
+if(unidade){
+
+    document.getElementById(
+    "nomeUnidade"
+    ).innerText = unidade;
+
+    if(unidade === "Parque Ibirapuera"){
+
+        document.getElementById(
+        "enderecoUnidade"
+        ).innerText =
+        "Av. Pedro Álvares Cabral";
+
+        document.getElementById(
+        "infoUnidade"
+        ).innerText =
+        "08h às 17h";
+        
+        document.getElementById(
+        "imagemUnidade"
+        ).src =
+        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400";
+    }
+
+    if(unidade === "Shopping Tatuapé"){
+
+        document.getElementById(
+        "enderecoUnidade"
+        ).innerText =
+        "Rua Domingos Agostim"
+
+        document.getElementById(
+        "infoUnidade"
+        ).innerText =
+        "09h às 16h";
+
+        document.getElementById(
+        "imagemUnidade"
+        ).src =
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400";
+
+    }
+
+    if(unidade === "Universidade Paulista"){
+
+        document.getElementById(
+        "enderecoUnidade"
+        ).innerText =
+        "Av. Paulista, 1000";
+
+        document.getElementById(
+        "infoUnidade"
+        ).innerText =
+        "08h às 18h";
+        
+        document.getElementById(
+        "imagemUnidade"
+        ).src =
+        "https://images.unsplash.com/photo-1562774053-701939374585?w=400";
+    }
+
+}
+
+let horarioSelecionado = "080:00";
 
 
 // ==============================
@@ -43,23 +111,6 @@ horarios.forEach(botao => {
 });
 
 
-// ==============================
-// CARREGAR UNIDADE ESCOLHIDA
-// ==============================
-
-const unidade =
-localStorage.getItem(
-"unidade"
-);
-
-if(unidade){
-
-    document.getElementById(
-    "nomeUnidade"
-    ).innerText =
-    unidade;
-
-}
 
 
 // ==============================
