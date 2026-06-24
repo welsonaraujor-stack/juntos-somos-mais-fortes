@@ -96,3 +96,20 @@ if(usuario){
     ).innerText = usuario;
 
 }
+// ============================
+// INICIAR PRÉ-TRIAGEM
+// ============================
+
+const btnTriagem =
+document.getElementById(
+"btnTriagem"
+);
+
+btnTriagem.addEventListener(
+"click",
+() => {
+
+    window.location.href =
+    "../../triagem/pre-triagem/pergunta1.html";
+
+});

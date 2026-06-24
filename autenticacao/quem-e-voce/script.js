@@ -1,42 +1,61 @@
-//function selecionar(tipo){
+// ========================================
+// TELA: QUEM É VOCÊ?
+// ========================================
 
-   // alert(
-   //     "Perfil selecionado: " + tipo
-   // );
+// Esta função é chamada pelo onclick
+// de cada card da tela
 
-    // Futuro feito dia 12/06/2026
+function selecionar(tipoPerfil) {
 
-    // if(tipo === "Pessoa"){
-    //     window.location.href =
-    //     "../pessoa/index.html";
-    // }
+    // Salva o perfil escolhido
+    localStorage.setItem(
+        "perfil",
+        tipoPerfil
+    );
 
-//}
-function selecionar(tipo){
+    console.log(
+        "Perfil selecionado:",
+        tipoPerfil
+    );
 
-    if(tipo === "Pessoa"){
+    // Redireciona para a tela correta
 
-        window.location.href =
-        "../../perfis/pessoa/index.html";
+    switch (tipoPerfil) {
+
+        case "Pessoa":
+
+            window.location.href =
+            "../../perfis/pessoa/index.html";
+
+            break;
+
+        case "Grupo":
+
+            window.location.href =
+            "../../perfis/grupo/index.html";
+
+            break;
+
+        case "Instituição":
+
+            window.location.href =
+            "../../perfis/instituicao/index.html";
+
+            break;
+
+        case "Parceiro":
+
+            window.location.href =
+            "../../perfis/parceiro/index.html";
+
+            break;
+
+        default:
+
+            alert(
+                "Perfil inválido."
+            );
 
     }
 
-    if(tipo === "Grupo"){
-
-        window.location.href =
-        "../../perfis/grupo/index.html";
-
-    }
-    
-       if(tipo === "Instituição"){
-    window.location.href =
-    "../../perfis/instituicao/index.html";
-    
-    }
-
-    if(tipo === "Parceiro"){
-    window.location.href =
-    "../../perfis/parceiro/index.html";
-    //== modificação por ter feito a organização das pastas ==
-    }
 }
