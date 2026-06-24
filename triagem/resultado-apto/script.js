@@ -1,7 +1,7 @@
 function abrirMapa(){
 
     window.location.href =
-    "../doacao/mapa-unidades/index.html";
+    "../../doacao/mapa-unidades/index.html";
 
 }
 

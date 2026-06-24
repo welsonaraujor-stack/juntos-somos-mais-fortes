@@ -20,8 +20,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <div class="container">
 
     <h1>
+
         Encontre uma<br>
         unidade perto de você
+
     </h1>
 
     <div class="cidade">
@@ -46,69 +48,165 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     </div>
 
-    <div class="card-unidade">
+    <!-- UNIDADE 1 -->
+
+    <div
+    class="card-unidade"
+    onclick="selecionarUnidade('Parque Ibirapuera')">
 
         <img
         src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=500">
 
-        <div>
+        <div class="info-unidade">
 
             <h3>Parque Ibirapuera</h3>
 
-            <p>Av. Pedro Álvares Cabral</p>
+            <p>
 
-            <p>10/06 - 08h às 17h</p>
+                <i class="fa-solid fa-location-dot"></i>
 
-            <span>15 vagas disponíveis</span>
+                Av. Pedro Álvares Cabral
+
+            </p>
+
+            <p>
+
+                <i class="fa-regular fa-calendar"></i>
+
+                10/06/2026
+
+            </p>
+
+            <span>
+
+                15 vagas disponíveis
+
+            </span>
 
         </div>
 
     </div>
 
-    <div class="card-unidade">
+    <!-- UNIDADE 2 -->
+
+    <div
+    class="card-unidade"
+    onclick="selecionarUnidade('Shopping Tatuapé')">
 
         <img
         src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500">
 
-        <div>
+        <div class="info-unidade">
 
             <h3>Shopping Tatuapé</h3>
 
-            <p>Rua Domingos Agostim</p>
+            <p>
 
-            <p>11/06 - 09h às 16h</p>
+                <i class="fa-solid fa-location-dot"></i>
 
-            <span>20 vagas disponíveis</span>
+                Rua Domingos Agostim
+
+            </p>
+
+            <p>
+
+                <i class="fa-regular fa-calendar"></i>
+
+                11/06/2026
+
+            </p>
+
+            <span>
+
+                20 vagas disponíveis
+
+            </span>
 
         </div>
 
     </div>
 
+    <!-- UNIDADE 3 -->
+
+    <div
+    class="card-unidade"
+    onclick="selecionarUnidade('Universidade Paulista')">
+
+        <img
+        src="https://images.unsplash.com/photo-1562774053-701939374585?w=500">
+
+        <div class="info-unidade">
+
+            <h3>Universidade Paulista</h3>
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Av. Paulista, 1000
+
+            </p>
+
+            <p>
+
+                <i class="fa-regular fa-calendar"></i>
+
+                12/06/2026
+
+            </p>
+
+            <span>
+
+                12 vagas disponíveis
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+
     <div class="menu">
 
         <div onclick="inicio()">
+
             <i class="fa-solid fa-house"></i>
+
             <span>Início</span>
+
         </div>
 
         <div onclick="agendar()">
+
             <i class="fa-regular fa-calendar"></i>
+
             <span>Agendar</span>
+
         </div>
 
         <div>
+
             <i class="fa-solid fa-droplet"></i>
+
             <span>Doações</span>
+
         </div>
 
         <div>
+
             <i class="fa-solid fa-heart"></i>
+
             <span>Benefícios</span>
+
         </div>
 
         <div>
+
             <i class="fa-regular fa-user"></i>
+
             <span>Perfil</span>
+
         </div>
 
     </div>
@@ -118,4 +216,5 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <script src="script.js"></script>
 
 </body>
+
 </html>

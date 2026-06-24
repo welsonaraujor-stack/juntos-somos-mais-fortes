@@ -64,8 +64,14 @@ margin:15px;
 border-radius:15px;
 background:white;
 box-shadow:0 0 10px rgba(0,0,0,.08);
-}
+cursor:pointer;
 
+transition:0.3s;
+}
+.card-unidade:hover{
+
+transform:translateY(-3px);
+}
 .card-unidade img{
 width:90px;
 height:90px;

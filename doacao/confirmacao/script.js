@@ -1,14 +1,75 @@
+// =====================================
+// CARREGAR DADOS DO AGENDAMENTO
+// =====================================
+
+const unidade =
+localStorage.getItem(
+"unidade"
+);
+
+const data =
+localStorage.getItem(
+"dataDoacao"
+);
+
+const horario =
+localStorage.getItem(
+"horarioDoacao"
+);
+
+
+// =====================================
+// EXIBIR DADOS
+// =====================================
+
+if(unidade){
+
+    document.getElementById(
+    "unidadeEscolhida"
+    ).innerText =
+    unidade;
+
+}
+
+if(data){
+
+    document.getElementById(
+    "dataEscolhida"
+    ).innerText =
+    data;
+
+}
+
+if(horario){
+
+    document.getElementById(
+    "horarioEscolhido"
+    ).innerText =
+    horario;
+
+}
+
+
+// =====================================
+// ADICIONAR À AGENDA
+// =====================================
+
 function adicionarAgenda(){
 
     alert(
-    "Função de calendário será implementada futuramente."
+    "Funcionalidade em desenvolvimento."
     );
 
 }
 
+
+// =====================================
+// VOLTAR AO INÍCIO
+// =====================================
+
 function voltarInicio(){
 
     window.location.href =
-    "../triagem/resultado-apto/index.html";
+    "../../autenticacao/login/index.html";
 
 }
