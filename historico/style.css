@@ -1,0 +1,25 @@
+body{
+
+font-family:sans-serif;
+
+background:#f4f4f4;
+
+padding:20px;
+
+}
+
+.container{
+
+max-width:500px;
+
+margin:0 auto;
+
+}
+
+.card{
+width:380px;
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,.08);
+}

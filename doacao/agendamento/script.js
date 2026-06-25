@@ -159,6 +159,45 @@ function confirmarAgendamento(){
     "horarioDoacao",
     horarioSelecionado
     );
+    // =====================
+// SALVAR HISTÓRICO
+// =====================
+
+    const historico =
+
+    JSON.parse(
+    localStorage.getItem(
+    "historicoDoacoes"
+    )
+    ) || [];
+
+    historico.push({
+
+    unidade:
+    localStorage.getItem(
+    "unidade"
+    ),
+
+    data:
+    dataBrasil,
+
+    horario:
+    horarioSelecionado,
+
+    status:
+    "Confirmado"
+
+    });
+
+    localStorage.setItem(
+
+    "historicoDoacoes",
+
+    JSON.stringify(
+    historico
+    )
+
+);
 
     window.location.href =
     "../confirmacao/index.html";
