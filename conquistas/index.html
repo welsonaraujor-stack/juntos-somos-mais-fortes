@@ -1,184 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conquistas</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
 <div class="phone">
 
     <header>
-
         <div class="perfil">
             <img src="https://i.pravatar.cc/120" alt="">
         </div>
-
         <div class="notificacao">
             <i class="fa-regular fa-bell"></i>
             <span></span>
         </div>
-
     </header>
 
     <section class="titulo">
-
-        <h1>🏆 Conquistas</h1>
-
-        <p>
-            Acompanhe suas medalhas, níveis e marcos alcançados.
-        </p>
-
+        <h1>
+            <i class="fa-solid fa-trophy"></i>
+            Conquistas
+        </h1>
+        <p>Acompanhe suas medalhas, níveis e marcos alcançados.</p>
     </section>
 
     <section class="progresso">
-
         <div class="cabecalho">
-
             <h3>Seu progresso</h3>
-
-            <div class="nivel">
-                Nível 4
-            </div>
-
+            <div class="nivel">Nível 4</div>
         </div>
-
         <div class="conteudo">
-
-            <div class="medalha">
-                🏅
+            <div class="medalha-xp">
+                <i class="fa-solid fa-medal"></i>
             </div>
-
             <div class="xp">
-
                 <h2>850 / 1200 XP</h2>
-
                 <div class="barra">
                     <div class="preenchimento"></div>
                 </div>
-
                 <p>Faltam 350 XP para o próximo nível</p>
-
             </div>
-
         </div>
-
     </section>
 
     <section class="medalhas">
-
         <div class="topo">
-
             <h3>Medalhas conquistadas</h3>
-
             <a href="#">Ver todas</a>
-
         </div>
-
         <div class="grid">
 
             <div class="medalha-card vermelho">
-                ❤️
+                <i class="fa-solid fa-droplet"></i>
                 <span>Doador Iniciante</span>
             </div>
 
             <div class="medalha-card amarelo">
-                🧡
+                <i class="fa-solid fa-hands-holding-heart"></i>
                 <span>Solidariedade</span>
             </div>
 
             <div class="medalha-card verde">
-                👥
+                <i class="fa-solid fa-people-group"></i>
                 <span>Amigo do Doador</span>
             </div>
 
             <div class="medalha-card azul">
-                💧
+                <i class="fa-solid fa-heart-pulse"></i>
                 <span>Vida Salva</span>
             </div>
 
         </div>
-
     </section>
 
     <section class="marcos">
-
         <h3>Marcos alcançados</h3>
 
         <div class="item">
-
-            <div>
+            <div class="item-icone vermelho">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="item-info">
                 <strong>Primeira doação</strong>
                 <p>Parabéns! Você fez sua primeira doação.</p>
             </div>
-
-            <i class="fa-solid fa-check"></i>
-
+            <div class="item-direita">
+                <span class="data">05/06/2026</span>
+                <i class="fa-solid fa-circle-check check"></i>
+            </div>
         </div>
 
         <div class="item">
-
-            <div>
+            <div class="item-icone amarelo">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+            <div class="item-info">
                 <strong>5 doações realizadas</strong>
                 <p>Obrigado! Você realizou 5 doações.</p>
             </div>
-
-            <i class="fa-solid fa-check"></i>
-
+            <div class="item-direita">
+                <span class="data">15/06/2026</span>
+                <i class="fa-solid fa-circle-check check"></i>
+            </div>
         </div>
 
         <div class="item">
-
-            <div>
-                <strong>10 vidas impactadas</strong>
-                <p>Você ajudou a salvar 10 vidas.</p>
+            <div class="item-icone verde">
+                <i class="fa-solid fa-heart"></i>
             </div>
-
-            <i class="fa-solid fa-check"></i>
-
+            <div class="item-info">
+                <strong>10 vidas impactadas</strong>
+                <p>Você ajudou a salvar 10 vidas!</p>
+            </div>
+            <div class="item-direita">
+                <span class="data">28/06/2026</span>
+                <i class="fa-solid fa-circle-check check"></i>
+            </div>
         </div>
 
     </section>
 
     <nav>
-
         <button>
             <i class="fa-solid fa-house"></i>
             <span>Início</span>
         </button>
-
         <button>
-            <i class="fa-regular fa-calendar"></i>
+            <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
         </button>
-
         <button>
             <i class="fa-regular fa-heart"></i>
             <span>Doações</span>
         </button>
-
         <button class="ativo">
             <i class="fa-solid fa-trophy"></i>
             <span>Conquistas</span>
         </button>
-
         <button>
             <i class="fa-regular fa-user"></i>
             <span>Perfil</span>
         </button>
-
     </nav>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

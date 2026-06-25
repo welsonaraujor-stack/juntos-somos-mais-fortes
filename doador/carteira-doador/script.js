@@ -7,3 +7,7 @@ alert(
 );
 
 });
+// INÍCIO (Carteira do Doador)
+document.getElementById("btnInicio").onclick = () => {
+    window.location.href = "../carteira-doador/index.html";
+};

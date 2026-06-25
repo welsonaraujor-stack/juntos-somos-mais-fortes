@@ -1,195 +1,268 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-background:#f5f5f5;
-display:flex;
-justify-content:center;
-padding:20px;
+body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.phone{
-width:390px;
-height:844px;
-background:white;
-border-radius:30px;
-padding:20px;
-overflow-y:auto;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+.phone {
+    width: 390px;
+    height: 844px;
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
-header{
-position:relative;
-display:flex;
-justify-content:center;
-margin-bottom:25px;
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
-.perfil img{
-width:70px;
-height:70px;
-border-radius:50%;
-object-fit:cover;
+.perfil img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.notificacao{
-position:absolute;
-right:0;
-font-size:24px;
+.notificacao {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
 }
 
-.notificacao span{
-width:10px;
-height:10px;
-background:red;
-border-radius:50%;
-position:absolute;
-top:0;
-right:0;
+.notificacao span {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.titulo h1{
-font-size:34px;
-margin-bottom:10px;
+.titulo h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.titulo p{
-color:#666;
-line-height:1.5;
+.titulo h1 i {
+    color: #e60000;
+    font-size: 26px;
 }
 
-.banner{
-margin-top:20px;
-background:#fff1f1;
-border:1px solid #ffd0d0;
-border-radius:20px;
-padding:20px;
-display:flex;
-align-items:center;
-gap:15px;
+.titulo p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
-.gift{
-font-size:70px;
+.banner {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fff1f1, #ffe4e4);
+    border: 1px solid #ffd0d0;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.banner h2{
-font-size:22px;
-color:#333;
+.gift {
+    font-size: 60px;
+    flex-shrink: 0;
 }
 
-.categorias{
-display:flex;
-justify-content:space-between;
-margin-top:20px;
-gap:8px;
+.banner h2 {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
 }
 
-.categoria{
-flex:1;
-border:1px solid #eee;
-background:white;
-border-radius:15px;
-padding:12px 5px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:8px;
-cursor:pointer;
+.categorias {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 6px;
 }
 
-.categoria i{
-font-size:18px;
+.categoria {
+    flex: 1;
+    border: 1px solid #eee;
+    background: white;
+    border-radius: 15px;
+    padding: 10px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.categoria span{
-font-size:12px;
+.categoria i {
+    font-size: 18px;
+    color: #999;
 }
 
-.ativa{
-color:#e60000;
-border-color:#e60000;
+.categoria span {
+    font-size: 11px;
+    color: #777;
 }
 
-.beneficios{
-margin-top:20px;
+.categoria:hover {
+    border-color: #e60000;
+    color: #e60000;
 }
 
-.card{
-display:flex;
-align-items:center;
-gap:15px;
-padding:18px;
-background:white;
-border-radius:20px;
-margin-bottom:15px;
-box-shadow:0 2px 12px rgba(0,0,0,.08);
+.categoria:hover i,
+.categoria:hover span {
+    color: #e60000;
 }
 
-.desconto{
-width:55px;
-height:55px;
-background:#e60000;
-color:white;
-font-weight:bold;
-border-radius:15px;
-display:flex;
-justify-content:center;
-align-items:center;
+.ativa {
+    border-color: #e60000;
+    background: #fff5f5;
 }
 
-.gratis{
-font-size:42px;
-width:55px;
-display:flex;
-justify-content:center;
+.ativa i,
+.ativa span {
+    color: #e60000;
+    font-weight: bold;
 }
 
-.info{
-flex:1;
+.beneficios {
+    margin-top: 20px;
 }
 
-.info h3{
-margin-bottom:5px;
+.beneficios-titulo {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
 }
 
-.info p{
-font-size:13px;
-color:#666;
+.card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    transition: transform 0.15s;
+    cursor: pointer;
 }
 
-.card i{
-color:#888;
+.card:hover {
+    transform: translateX(3px);
 }
 
-nav{
-display:flex;
-justify-content:space-around;
-border-top:1px solid #eee;
-padding-top:15px;
-margin-top:20px;
+.desconto {
+    width: 52px;
+    height: 52px;
+    background: #e60000;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 1.2;
 }
 
-nav button{
-border:none;
-background:none;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:5px;
-font-size:12px;
-color:#777;
-cursor:pointer;
+.desconto .off {
+    font-size: 9px;
+    font-weight: normal;
+    opacity: 0.9;
 }
 
-nav i{
-font-size:20px;
+.desconto.verde { background: #27ae60; }
+.desconto.azul  { background: #2980b9; }
+
+.gratis {
+    width: 52px;
+    height: 52px;
+    background: #27ae60;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.ativo-nav{
-color:#e60000;
+.info {
+    flex: 1;
+}
+
+.info h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #222;
+}
+
+.info p {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.card > i {
+    color: #ccc;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+nav button {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+nav i {
+    font-size: 20px;
+}
+
+nav button:hover {
+    color: #e60000;
+}
+
+.ativo-nav {
+    color: #e60000 !important;
+    font-weight: bold;
 }

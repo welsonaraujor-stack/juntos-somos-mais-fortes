@@ -203,3 +203,7 @@ function confirmarAgendamento(){
     "../confirmacao/index.html";
 
 }
+// AGENDAR
+document.getElementById("btnAgendar").onclick = () => {
+    window.location.href = "../agendamento/index.html";
+};

@@ -1,180 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Certificados</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <div class="phone">
 
     <header>
-
         <div class="perfil">
             <img src="https://i.pravatar.cc/150?img=12">
         </div>
-
         <div class="notificacao">
             <i class="fa-regular fa-bell"></i>
             <span></span>
         </div>
-
     </header>
 
     <section class="titulo">
-
-        <h1>🎓 Certificados</h1>
-
-        <p>
-            Acesse e compartilhe todos os seus certificados de doação.
-        </p>
-
+        <h1>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Certificados
+        </h1>
+        <p>Acesse e compartilhe todos os seus certificados de doação.</p>
     </section>
 
     <section class="tabs">
-
-        <button class="ativo">
-            Meus certificados
-        </button>
-
-        <button>
-            Histórico
-        </button>
-
+        <button class="ativo">Meus certificados</button>
+        <button id="btnHistorico">Histórico</button>
     </section>
 
     <section class="lista">
 
         <div class="certificado">
-
-            <img src="https://dummyimage.com/120x80/ffffff/000000&text=CERTIFICADO">
-
+            <div class="cert-img azul">
+                <i class="fa-solid fa-droplet"></i>
+                <span>CERTIFICADO</span>
+            </div>
             <div class="info">
-
                 <h3>Doação de Sangue</h3>
-
-                <p>
-                    Certificamos que você realizou uma doação de sangue.
-                </p>
-
-                <span>05/06/2026</span>
-
+                <p>Certificamos que você realizou uma doação de sangue.</p>
+                <span><i class="fa-regular fa-calendar"></i> 05/06/2026</span>
             </div>
-
             <button class="share">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-
         </div>
 
         <div class="certificado">
-
-            <img src="https://dummyimage.com/120x80/fff8e1/000000&text=CERTIFICADO">
-
+            <div class="cert-img amarelo">
+                <i class="fa-solid fa-star"></i>
+                <span>CERTIFICADO</span>
+            </div>
             <div class="info">
-
                 <h3>Doador Regular</h3>
-
-                <p>
-                    Parabéns por ser um doador regular e fazer a diferença.
-                </p>
-
-                <span>15/06/2026</span>
-
+                <p>Parabéns por ser um doador regular e fazer a diferença.</p>
+                <span><i class="fa-regular fa-calendar"></i> 15/06/2026</span>
             </div>
-
             <button class="share">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-
         </div>
 
         <div class="certificado">
-
-            <img src="https://dummyimage.com/120x80/fff5f5/000000&text=CERTIFICADO">
-
+            <div class="cert-img vermelho">
+                <i class="fa-solid fa-heart"></i>
+                <span>CERTIFICADO</span>
+            </div>
             <div class="info">
-
                 <h3>Amigo da Vida</h3>
-
-                <p>
-                    Sua solidariedade ajuda a salvar muitas vidas.
-                </p>
-
-                <span>28/06/2026</span>
-
+                <p>Sua solidariedade ajuda a salvar muitas vidas.</p>
+                <span><i class="fa-regular fa-calendar"></i> 28/06/2026</span>
             </div>
-
             <button class="share">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-
         </div>
 
         <div class="certificado">
-
-            <img src="https://dummyimage.com/120x80/fff3cd/000000&text=CERTIFICADO">
-
-            <div class="info">
-
-                <h3>Herói Solidário</h3>
-
-                <p>
-                    Reconhecimento especial pelo seu compromisso com a vida.
-                </p>
-
-                <span>10/07/2026</span>
-
+            <div class="cert-img dourado">
+                <i class="fa-solid fa-trophy"></i>
+                <span>HONRA</span>
             </div>
-
+            <div class="info">
+                <h3>Herói Solidário</h3>
+                <p>Reconhecimento especial pelo seu compromisso com a vida.</p>
+                <span><i class="fa-regular fa-calendar"></i> 10/07/2026</span>
+            </div>
             <button class="share">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-
         </div>
 
     </section>
 
     <nav>
-
-        <button>
+        <button id="btnInicio">
             <i class="fa-solid fa-house"></i>
             <span>Início</span>
         </button>
-
-        <button>
-            <i class="fa-regular fa-calendar"></i>
+        <button id="btnAgendar">
+            <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
         </button>
-
-        <button>
+        <button id="btnDoacoes">
             <i class="fa-regular fa-heart"></i>
             <span>Doações</span>
         </button>
-
-        <button class="ativo-nav">
+        <button id="btnConquistas" class="ativo-nav">
             <i class="fa-solid fa-trophy"></i>
             <span>Conquistas</span>
         </button>
-
-        <button>
+        <button id="btnPerfil">
             <i class="fa-regular fa-user"></i>
             <span>Perfil</span>
         </button>
-
     </nav>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

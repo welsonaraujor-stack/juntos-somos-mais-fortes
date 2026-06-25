@@ -1,170 +1,240 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-background:#f5f5f5;
-display:flex;
-justify-content:center;
-padding:20px;
+body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.phone{
-width:390px;
-height:844px;
-background:white;
-border-radius:30px;
-padding:20px;
-overflow-y:auto;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+.phone {
+    width: 390px;
+    height: 844px;
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
-header{
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
-margin-bottom:25px;
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
-.perfil img{
-width:70px;
-height:70px;
-border-radius:50%;
-object-fit:cover;
+.perfil img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.notificacao{
-position:absolute;
-right:0;
-font-size:24px;
-cursor:pointer;
+.notificacao {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.notificacao span{
-width:10px;
-height:10px;
-background:red;
-border-radius:50%;
-position:absolute;
-top:0;
-right:0;
+.notificacao span {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.titulo h1{
-font-size:34px;
-margin-bottom:10px;
+.titulo h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.titulo p{
-color:#666;
-line-height:1.5;
+.titulo h1 i {
+    color: #e60000;
+    font-size: 26px;
 }
 
-.tabs{
-display:flex;
-margin-top:25px;
-border:1px solid #eee;
-border-radius:15px;
-overflow:hidden;
+.titulo p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
-.tabs button{
-flex:1;
-padding:15px;
-border:none;
-background:white;
-cursor:pointer;
-font-weight:600;
+/* TABS */
+.tabs {
+    display: flex;
+    margin-top: 25px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.tabs .ativo{
-background:#e60000;
-color:white;
+.tabs button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
 }
 
-.lista{
-margin-top:20px;
+.tabs button:hover {
+    background: #fff5f5;
+    color: #e60000;
 }
 
-.certificado{
-display:flex;
-align-items:center;
-gap:15px;
-padding:15px;
-background:white;
-border-radius:20px;
-margin-bottom:15px;
-box-shadow:0 2px 12px rgba(0,0,0,.08);
+.tabs .ativo {
+    background: #e60000;
+    color: white;
 }
 
-.certificado img{
-width:90px;
-height:65px;
-border-radius:8px;
-object-fit:cover;
+/* LISTA */
+.lista {
+    margin-top: 20px;
 }
 
-.info{
-flex:1;
+.certificado {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background: white;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    transition: transform 0.15s;
+    cursor: pointer;
 }
 
-.info h3{
-font-size:18px;
-margin-bottom:5px;
+.certificado:hover {
+    transform: translateX(3px);
 }
 
-.info p{
-font-size:13px;
-color:#666;
-line-height:1.4;
+/* IMAGEM DO CERTIFICADO — substituída por badge colorido */
+.cert-img {
+    width: 80px;
+    height: 62px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
 }
 
-.info span{
-display:block;
-margin-top:8px;
-font-size:13px;
-color:#888;
+.cert-img i {
+    font-size: 22px;
+    color: white;
 }
 
-.share{
-width:45px;
-height:45px;
-border:none;
-background:#fafafa;
-border-radius:12px;
-cursor:pointer;
-font-size:18px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+.cert-img span {
+    font-size: 8px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
 }
 
-nav{
-display:flex;
-justify-content:space-around;
-border-top:1px solid #eee;
-padding-top:15px;
-margin-top:20px;
+.cert-img.azul    { background: linear-gradient(135deg, #2980b9, #3498db); }
+.cert-img.amarelo { background: linear-gradient(135deg, #f39c12, #f1c40f); }
+.cert-img.vermelho{ background: linear-gradient(135deg, #c0392b, #e74c3c); }
+.cert-img.dourado { background: linear-gradient(135deg, #b7950b, #d4ac0d); }
+
+/* INFO */
+.info {
+    flex: 1;
 }
 
-nav button{
-border:none;
-background:none;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:5px;
-font-size:12px;
-color:#777;
-cursor:pointer;
+.info h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #222;
 }
 
-nav i{
-font-size:20px;
+.info p {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
 }
 
-.ativo-nav{
-color:#e60000;
+.info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.info span i {
+    font-size: 11px;
+}
+
+/* BOTÃO SHARE */
+.share {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.share:hover {
+    background: #e60000;
+    color: white;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+nav button {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+nav button:hover {
+    color: #e60000;
+}
+
+nav i {
+    font-size: 20px;
+}
+
+.ativo-nav {
+    color: #e60000 !important;
+    font-weight: bold;
 }
