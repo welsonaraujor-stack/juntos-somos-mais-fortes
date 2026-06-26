@@ -1,131 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Seu Impacto</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Social</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <h2>Seu impacto</h2>
+    <header>
+        <a href="#" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Impacto Social</h1>
+            <p>Veja o impacto que suas doações geram na vida de outras pessoas.</p>
+        </div>
+    </header>
 
-    <div class="icone-coracao">
-
+    <section class="hero">
+    <div class="hero-foto">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Foto do doador">
+        <div class="hero-badge">
+            <i class="fa-solid fa-droplet"></i>
+        </div>
+    </div>
+    <span>João, você já ajudou</span>
+    <h2>20</h2>
+    <h3>vidas!</h3>
+    <p>Cada doação é um ato de amor que transforma.</p>
+    <div class="hearts">
         <i class="fa-solid fa-heart"></i>
-
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
     </div>
+    </section>
 
-    <h3>Sua jornada faz a diferença!</h3>
+    <h4>Seu impacto em números</h4>
 
-    <div class="card-info">
+    <section class="cards">
 
-        <div class="icone">
-
-            <i class="fa-solid fa-droplet"></i>
-
+        <div class="card">
+            <div class="card-icone vermelho">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <h5>5</h5>
+            <p>doações realizadas</p>
         </div>
 
+        <div class="card">
+            <div class="card-icone rosa">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h5>1.600 ml</h5>
+            <p>de sangue doado</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icone verde">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h5>20</h5>
+            <p>vidas impactadas</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icone azul">
+                <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <h5>5</h5>
+            <p>campanhas participadas</p>
+        </div>
+
+    </section>
+
+    <section class="message">
+        <div class="message-icone">
+            <i class="fa-solid fa-heart"></i>
+        </div>
         <div>
+            <strong>O sangue doado por você pode salvar até 4 vidas.</strong>
+            <p>Continue fazendo a diferença!</p>
+        </div>
+    </section>
 
-            <strong>5</strong>
+    <section class="usage">
 
-            <p>Doações realizadas</p>
+        <h4>Como seu sangue é utilizado</h4>
 
+        <div class="barra-item">
+            <div class="barra-topo">
+                <span>Cirurgias</span>
+                <span class="pct">31%</span>
+            </div>
+            <div class="progress">
+                <div class="fill" style="width:31%"></div>
+            </div>
         </div>
 
-    </div>
-
-    <div class="card-info">
-
-        <div class="icone">
-
-            <i class="fa-regular fa-calendar-plus"></i>
-
+        <div class="barra-item">
+            <div class="barra-topo">
+                <span>Tratamento de doenças</span>
+                <span class="pct">28%</span>
+            </div>
+            <div class="progress">
+                <div class="fill" style="width:28%"></div>
+            </div>
         </div>
 
-        <div>
-
-            <strong>Até 20</strong>
-
-            <p>Vidas impactadas</p>
-
+        <div class="barra-item">
+            <div class="barra-topo">
+                <span>Emergências</span>
+                <span class="pct">25%</span>
+            </div>
+            <div class="progress">
+                <div class="fill" style="width:25%"></div>
+            </div>
         </div>
 
-    </div>
-
-    <div class="card-info">
-
-        <div class="icone">
-
-            <i class="fa-solid fa-droplet"></i>
-
+        <div class="barra-item">
+            <div class="barra-topo">
+                <span>Partos e outras situações</span>
+                <span class="pct">16%</span>
+            </div>
+            <div class="progress">
+                <div class="fill" style="width:16%"></div>
+            </div>
         </div>
 
-        <div>
+    </section>
 
-            <strong>1.600 ml</strong>
-
-            <p>De sangue doado</p>
-
-        </div>
-
-    </div>
-
-    <div class="mensagem">
-
-        <i class="fa-regular fa-heart"></i>
-
-        <span>
-            Cada bolsa de sangue pode
-            salvar até 4 vidas.
-        </span>
-
-    </div>
-
-    <div class="menu">
-
-        <div>
+    <nav>
+        <button>
             <i class="fa-solid fa-house"></i>
             <span>Início</span>
-        </div>
-
-        <div>
-            <i class="fa-regular fa-calendar"></i>
+        </button>
+        <button>
+            <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
-        </div>
-
-        <div class="ativo">
+        </button>
+        <button class="ativo">
             <i class="fa-solid fa-heart"></i>
-            <span>Impacto</span>
-        </div>
-
-        <div>
+            <span>Doações</span>
+        </button>
+        <button>
             <i class="fa-solid fa-gift"></i>
             <span>Benefícios</span>
-        </div>
-
-        <div>
+        </button>
+        <button>
             <i class="fa-regular fa-user"></i>
             <span>Perfil</span>
-        </div>
-
-    </div>
+        </button>
+    </nav>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

@@ -1,119 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Convide Amigos</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convide Amigos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <h2>Convide amigos</h2>
+    <header>
+        <a href="#" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Convide amigos</h1>
+            <p>Ajude a salvar ainda mais vidas!</p>
+        </div>
+    </header>
 
-    <img
-    src="assets/img/amigos.png" alt="amigos"
-    class="amigos">
+    <section class="hero">
+        <div class="hero-icones">
+            <div class="avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="avatar destaque">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+        <h2>Indique seus amigos</h2>
+        <p>Cada amigo convidado amplia a rede de doadores e ajuda a salvar mais vidas.</p>
+    </section>
 
-    <p class="texto">
+    <section class="codigo-section">
+        <small>Seu código de indicação</small>
+        <div class="codigo">
+            <span id="codigo">JUNTOS2026</span>
+            <button onclick="copiarCodigo()" class="btn-copiar">
+                <i class="fa-regular fa-copy"></i>
+                Copiar
+            </button>
+        </div>
+    </section>
 
-        Indique seus amigos e ajude
-        a salvar ainda mais vidas!
-
-    </p>
-
-    <small>Seu código de indicação</small>
-
-    <div class="codigo">
-
-        <span id="codigo">
-
-            JUNTOS2026
-
-        </span>
-
-        <button onclick="copiarCodigo()">
-
-            <i class="fa-regular fa-copy"></i>
-
-        </button>
-
-    </div>
-
-    <button
-    class="compartilhar"
-    onclick="compartilhar()">
-
+    <button class="btn-compartilhar" onclick="compartilhar()">
+        <i class="fa-solid fa-share-nodes"></i>
         Compartilhar convite
-
     </button>
 
-    <div class="redes">
-
-        <div>
-            <i class="fa-brands fa-whatsapp"></i>
+    <section class="redes">
+        <div class="rede-item">
+            <div class="rede-icone whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
             <span>WhatsApp</span>
         </div>
-
-        <div>
-            <i class="fa-brands fa-instagram"></i>
+        <div class="rede-item">
+            <div class="rede-icone instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
             <span>Instagram</span>
         </div>
-
-        <div>
-            <i class="fa-brands fa-facebook"></i>
+        <div class="rede-item">
+            <div class="rede-icone facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </div>
             <span>Facebook</span>
         </div>
-
-        <div>
-            <i class="fa-solid fa-ellipsis"></i>
+        <div class="rede-item">
+            <div class="rede-icone mais">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
             <span>Mais</span>
         </div>
+    </section>
 
-    </div>
-
-    <div class="menu">
-
+    <section class="info-box">
+        <div class="info-icone">
+            <i class="fa-solid fa-droplet"></i>
+        </div>
         <div>
+            <strong>Cada novo doador pode salvar até 4 vidas.</strong>
+            <p>Quanto mais amigos, maior o impacto.</p>
+        </div>
+    </section>
+
+    <nav>
+        <button>
             <i class="fa-solid fa-house"></i>
             <span>Início</span>
-        </div>
-
-        <div>
-            <i class="fa-regular fa-calendar"></i>
+        </button>
+        <button>
+            <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
-        </div>
-
-        <div>
+        </button>
+        <button>
             <i class="fa-solid fa-droplet"></i>
             <span>Doações</span>
-        </div>
-
-        <div>
+        </button>
+        <button>
             <i class="fa-solid fa-gift"></i>
             <span>Benefícios</span>
-        </div>
-
-        <div>
+        </button>
+        <button>
             <i class="fa-regular fa-user"></i>
             <span>Perfil</span>
-        </div>
-
-    </div>
+        </button>
+    </nav>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

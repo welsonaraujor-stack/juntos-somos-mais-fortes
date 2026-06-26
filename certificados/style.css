@@ -149,6 +149,13 @@ header {
     color: white;
     letter-spacing: 1px;
 }
+.cert-thumb {
+    width: 90px;
+    height: 65px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
 
 .cert-img.azul    { background: linear-gradient(135deg, #2980b9, #3498db); }
 .cert-img.amarelo { background: linear-gradient(135deg, #f39c12, #f1c40f); }

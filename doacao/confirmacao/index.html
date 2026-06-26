@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Agendamento Confirmado</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Confirmado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="card">
+<div class="phone">
 
-    <div class="sucesso">
-
-        <i class="fa-solid fa-check"></i>
-
+    <!-- TOPO COM FOTO -->
+    <div class="topo">
+        <div class="foto-wrapper">
+            <img src="https://i.pravatar.cc/150?img=12" alt="Foto do doador">
+            <div class="foto-badge">
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
+        <h2>João da Silva</h2>
+        <p class="subtitulo">Doador confirmado</p>
     </div>
 
-    <h1>
+    <!-- BANNER CONFIRMADO -->
+    <div class="banner-sucesso">
+        <div class="sucesso-icone">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div>
+            <strong>Agendamento Confirmado!</strong>
+            <p>Sua doação foi agendada com sucesso.</p>
+        </div>
+    </div>
 
-        Agendamento
-        Confirmado!
-
-    </h1>
-
-    <p>
-
-        Sua doação foi agendada com sucesso.
-
-    </p>
-
+    <!-- DETALHES -->
     <div class="detalhes">
 
-        <h3>📍 Local</h3>
+        <div class="detalhe-item">
+            <div class="detalhe-icone">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="detalhe-info">
+                <small>Local</small>
+                <strong id="unidadeEscolhida">Parque Ibirapuera</strong>
+            </div>
+        </div>
 
-        <span id="unidadeEscolhida"></span>
+        <div class="divisor"></div>
 
-        <h3>📅 Data</h3>
+        <div class="detalhe-item">
+            <div class="detalhe-icone azul">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="detalhe-info">
+                <small>Data</small>
+                <strong id="dataEscolhida">10/06/2026</strong>
+            </div>
+        </div>
 
-        <span id="dataEscolhida"></span>
+        <div class="divisor"></div>
 
-        <h3>🕒 Horário</h3>
-
-        <span id="horarioEscolhido"></span>
+        <div class="detalhe-item">
+            <div class="detalhe-icone verde">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="detalhe-info">
+                <small>Horário</small>
+                <strong id="horarioEscolhido">08:00</strong>
+            </div>
+        </div>
 
     </div>
 
-    <div class="qr">
-
-        <img
-        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=JUNTOS-SOMOS-MAIS-FORTES">
-
+    <!-- QR CODE -->
+    <div class="qr-section">
+        <p class="qr-label">
+            <i class="fa-solid fa-qrcode"></i>
+            Apresente este QR Code na chegada
+        </p>
+        <div class="qr-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=JUNTOS-SOMOS-MAIS-FORTES">
+        </div>
+        <small>Código: JUNTOS-2026-0001</small>
     </div>
 
-    <p class="info">
+    <!-- BOTÕES -->
+    <div class="botoes">
+        <button class="btn-primario" onclick="adicionarAgenda()">
+            <i class="fa-solid fa-calendar-plus"></i>
+            Adicionar à Agenda
+        </button>
+        <button class="btn-secundario" onclick="voltarInicio()">
+            <i class="fa-solid fa-house"></i>
+            Voltar ao Início
+        </button>
+    </div>
 
-        Apresente este QR Code
-        na chegada à unidade.
-
-    </p>
-
-    <button
-    onclick="adicionarAgenda()">
-
-        Adicionar à Agenda
-
-    </button>
-
-    <button
-    class="secundario"
-    onclick="voltarInicio()">
-
-        Voltar ao Início
-
-    </button>
+    <!-- INFO FINAL -->
+    <div class="info-box">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>Chegue com 15 minutos de antecedência e traga um documento com foto.</p>
+    </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

@@ -1,82 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Carteira do Doador</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira do Doador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
     <div class="perfil">
-
         <img src="https://i.pravatar.cc/150?img=12">
-
         <div class="dados">
-
             <h2>João da Silva</h2>
-
-            <p>Doador desde 2026</p>
-
+            <p><i class="fa-solid fa-droplet"></i> Doador desde 2026</p>
         </div>
-
         <i class="fa-solid fa-circle-check check"></i>
-
     </div>
 
     <div class="card">
 
         <div class="tipo">
-
             <h3>Tipo Sanguíneo</h3>
-
             <div class="sangue">
-
                 <span>O+</span>
-
                 <i class="fa-solid fa-droplet"></i>
-
             </div>
-
         </div>
 
         <div class="datas">
-
             <div>
-
                 <small>Última doação</small>
-
                 <strong>05/06/2026</strong>
-
             </div>
-
+            <div class="separador"></div>
             <div>
-
                 <small>Próxima doação possível</small>
-
                 <strong>05/09/2026</strong>
-
             </div>
-
         </div>
 
         <button class="historico">
-
             Ver histórico completo
-
             <i class="fa-solid fa-chevron-right"></i>
-
         </button>
 
     </div>
@@ -84,59 +52,118 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <div class="atalhos">
 
         <div class="box">
-            <i class="fa-solid fa-medal"></i>
+            <div class="box-icone vermelho">
+                <i class="fa-solid fa-medal"></i>
+            </div>
             <span>Conquistas</span>
         </div>
 
         <div class="box">
-            <i class="fa-solid fa-file-lines"></i>
+            <div class="box-icone laranja">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
             <span>Certificados</span>
         </div>
 
         <div class="box">
-            <i class="fa-solid fa-award"></i>
+            <div class="box-icone verde">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
             <span>Impacto</span>
         </div>
 
         <div class="box">
-            <i class="fa-solid fa-gift"></i>
+            <div class="box-icone azul">
+                <i class="fa-solid fa-gift"></i>
+            </div>
             <span>Benefícios</span>
         </div>
 
     </div>
+    <!-- CAMPANHAS PRÓXIMAS -->
+    <div class="secao">
+    <div class="secao-topo">
+        <h3>Campanhas próximas</h3>
+        <a href="#">Ver todas →</a>
+    </div>
 
-    <div class="menu">
+    <div class="campanha-card">
+        <div class="campanha-icone vermelho">
+            <i class="fa-solid fa-bus"></i>
+        </div>
+        <div class="campanha-info">
+            <strong>Parque Ibirapuera</strong>
+            <span>10/06 · 08h às 17h</span>
+        </div>
+        <div class="vaga verde">15 vagas</div>
+    </div>
 
-        <div>
+    <div class="campanha-card">
+        <div class="campanha-icone azul">
+            <i class="fa-solid fa-bus"></i>
+        </div>
+        <div class="campanha-info">
+            <strong>Shopping Tatuapé</strong>
+            <span>11/06 · 09h às 16h</span>
+        </div>
+        <div class="vaga amarelo">20 vagas</div>
+    </div>
+</div>
+
+<!-- CONVIDAR AMIGOS -->
+<div class="secao">
+    <div class="secao-topo">
+        <h3>Convide amigos</h3>
+    </div>
+
+    <div class="convite-box">
+        <p>Compartilhe seu código e ajude mais pessoas a salvar vidas.</p>
+
+        <div class="codigo-linha">
+            <div class="codigo">JUNTOS2026</div>
+            <button class="btn-copiar">
+                <i class="fa-solid fa-copy"></i>
+                Copiar
+            </button>
+        </div>
+
+        <div class="compartilhar-linha">
+            <button class="btn-share">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+            </button>
+            <button class="btn-share">
+                <i class="fa-solid fa-share-nodes"></i>
+                Compartilhar
+            </button>
+        </div>
+    </div>
+</div>
+    <nav>
+        <button>
             <i class="fa-solid fa-house"></i>
             <span>Início</span>
-        </div>
-
-        <div>
-            <i class="fa-regular fa-calendar"></i>
+        </button>
+        <button>
+            <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
-        </div>
-
-        <div >
+        </button>
+        <button class="ativo">
             <i class="fa-solid fa-heart"></i>
             <span>Doações</span>
-        </div>
-
-        <div>
+        </button>
+        <button>
             <i class="fa-solid fa-gift"></i>
             <span>Benefícios</span>
-        </div>
-
-        <div class="ativo">
+        </button>
+        <button>
             <i class="fa-regular fa-user"></i>
             <span>Perfil</span>
-        </div>
-
-    </div>
+        </button>
+    </nav>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

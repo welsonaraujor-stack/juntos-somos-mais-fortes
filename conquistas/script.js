@@ -29,4 +29,4 @@ document.getElementById("btnConquistas").onclick = () => {
 
 document.getElementById("btnPerfil").onclick = () => {
     window.location.href = "../../doador/carteira-doador/index.html";
-};
+}; 
