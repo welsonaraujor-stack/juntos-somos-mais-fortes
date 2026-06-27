@@ -38,22 +38,22 @@
 
 - [x] Impacto Social
 - [x] Convide Amigos
-- [ ] Histórico de Doações
-- [ ] Conquistas
-- [ ] Certificados
-- [ ] Benefícios
-- [ ] Perfil
+- [x] Histórico de Doações
+- [x] Conquistas
+- [x] Certificados
+- [x] Benefícios
+- [x] Perfil
 
 ---
 
 # FASE 5 - JavaScript
 
-- [ ] Mostrar/Ocultar Senha
-- [ ] Validação de Campos
-- [ ] Máscara de CPF
-- [ ] Máscara de Telefone
+- [x] Mostrar/Ocultar Senha
+- [x] Validação de Campos
+- [x] Máscara de CPF
+- [x] Máscara de Telefone
 - [ ] LocalStorage
-- [ ] Resultado Automático da Triagem
+- [x] Resultado Automático da Triagem
 
 ---
 

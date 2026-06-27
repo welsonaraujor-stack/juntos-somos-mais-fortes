@@ -1,79 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Doação de Órgãos</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação de Órgãos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <h2>Doação de Órgãos</h2>
+    <header>
+        <a href="#" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Doação de Órgãos</h1>
+            <p>Registre sua vontade e ajude a salvar mais vidas.</p>
+        </div>
+    </header>
 
-    <div class="icone">
-
-        <i class="fa-solid fa-hand-holding-heart"></i>
-
+    <div class="hero">
+        <div class="hero-icone">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <div>
+            <strong>A doação de órgãos salva vidas.</strong>
+            <p>Uma única pessoa pode salvar até <span class="destaque">8 vidas</span> e transformar a vida de outras <span class="destaque">50 pessoas</span>.</p>
+        </div>
     </div>
 
-    <h3>
-        A doação de órgãos
-        salva vidas.
-    </h3>
-
-    <p>
-        Deseja registrar seu interesse
-        em ser doador de órgãos?
-    </p>
-
-    <div class="opcao selecionado"
-    onclick="selecionar('sim')"
-    id="sim">
-
-        <i class="fa-solid fa-circle-check"></i>
-
-        <span>Sim, quero ser doador</span>
-
+    <div class="stats">
+        <div class="stat">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <strong>8</strong>
+            <span>vidas salvas</span>
+        </div>
+        <div class="divisor-v"></div>
+        <div class="stat">
+            <i class="fa-solid fa-eye"></i>
+            <strong>50</strong>
+            <span>pessoas beneficiadas</span>
+        </div>
+        <div class="divisor-v"></div>
+        <div class="stat">
+            <i class="fa-solid fa-users"></i>
+            <strong>+60mil</strong>
+            <span>na fila no Brasil</span>
+        </div>
     </div>
 
-    <div class="opcao"
-    onclick="selecionar('nao')"
-    id="nao">
+    <p class="pergunta">Deseja registrar seu interesse em ser doador de órgãos?</p>
 
-        <i class="fa-regular fa-circle"></i>
-
-        <span>Não desejo me registrar</span>
-
+    <div class="opcao selecionado" onclick="selecionar('sim')" id="sim">
+        <div class="opcao-icone verde">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="opcao-texto">
+            <strong>Sim, quero ser doador</strong>
+            <span>Registrar minha vontade</span>
+        </div>
+        <i class="fa-solid fa-circle-check check-icone"></i>
     </div>
 
-    <button onclick="continuar()">
+    <div class="opcao" onclick="selecionar('talvez')" id="talvez">
+        <div class="opcao-icone amarelo">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+        <div class="opcao-texto">
+            <strong>Ainda não decidi</strong>
+            <span>Quero pensar mais sobre isso</span>
+        </div>
+        <i class="fa-regular fa-circle check-icone"></i>
+    </div>
 
-        Continuar
+    <div class="opcao" onclick="selecionar('nao')" id="nao">
+        <div class="opcao-icone cinza">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="opcao-texto">
+            <strong>Não desejo me registrar</strong>
+            <span>Você pode mudar depois</span>
+        </div>
+        <i class="fa-regular fa-circle check-icone"></i>
+    </div>
 
-    </button>
+    <!-- TOGGLE — aparece só quando "sim" é selecionado -->
+    <div class="notificar-box" id="notificarBox">
+        <div class="notificar-texto">
+            <i class="fa-solid fa-bell"></i>
+            <div>
+                <strong>Informar contatos de emergência</strong>
+                <span>Seus contatos cadastrados serão notificados da sua decisão</span>
+            </div>
+        </div>
+        <label class="toggle">
+            <input type="checkbox" id="toggleNotificar" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
 
-    <div class="info">
-
+    <div class="saiba-mais">
         <i class="fa-solid fa-circle-info"></i>
-
-        Saiba mais sobre doação de órgãos
-
+        <a href="#">Saiba mais sobre doação de órgãos</a>
     </div>
+
+    <button class="btn-continuar" onclick="continuar()">
+        <i class="fa-solid fa-arrow-right"></i>
+        Continuar
+    </button>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

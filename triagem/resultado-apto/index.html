@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Resultado da Pré-Triagem</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Pré-Triagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="card">
+<div class="phone">
 
+    <!-- CONFETES ANIMADOS -->
     <div class="confetes">
+        <span style="--c:#ff4081;--x:10%;--d:0s"></span>
+        <span style="--c:#ffc107;--x:25%;--d:0.2s"></span>
+        <span style="--c:#4caf50;--x:40%;--d:0.4s"></span>
+        <span style="--c:#2196f3;--x:55%;--d:0.1s"></span>
+        <span style="--c:#ff5722;--x:70%;--d:0.3s"></span>
+        <span style="--c:#9c27b0;--x:82%;--d:0.5s"></span>
+        <span style="--c:#00bcd4;--x:90%;--d:0.2s"></span>
+        <span style="--c:#ff9800;--x:50%;--d:0.6s"></span>
+    </div>
 
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- FOTO DO DOADOR -->
+    <div class="foto-wrapper">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Foto do doador">
+        <div class="foto-badge">
+            <i class="fa-solid fa-check"></i>
+        </div>
+    </div>
+
+    <p class="nome-doador">João, você está apto!</p>
+
+    <!-- BANNER APROVADO -->
+    <div class="banner-aprovado">
+        <div class="banner-icone">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+            <strong>Nenhum impedimento identificado</strong>
+            <p>Você pode prosseguir para a triagem presencial.</p>
+        </div>
+    </div>
+
+    <!-- PRÓXIMOS PASSOS -->
+    <div class="passos">
+        <p class="passos-titulo">Próximos passos</p>
+
+        <div class="passo">
+            <div class="passo-num">1</div>
+            <div class="passo-info">
+                <strong>Encontre uma unidade móvel</strong>
+                <span>Veja as campanhas próximas de você</span>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div class="passo">
+            <div class="passo-num">2</div>
+            <div class="passo-info">
+                <strong>Agende sua doação</strong>
+                <span>Escolha data e horário sem filas</span>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div class="passo">
+            <div class="passo-num">3</div>
+            <div class="passo-info">
+                <strong>Faça a triagem presencial</strong>
+                <span>Chegue 15 min antes com documento</span>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
 
     </div>
 
-    <h1>
-
-        Resultado da<br>
-        pré-triagem
-
-    </h1>
-
-    <div class="check">
-
-        <i class="fa-solid fa-check"></i>
-
+    <!-- INFO -->
+    <div class="info-box">
+        <i class="fa-solid fa-droplet"></i>
+        <p>Cada bolsa de sangue pode salvar até <strong>4 vidas.</strong></p>
     </div>
 
-    <h2>
+    <!-- BOTÕES -->
+    <div class="botoes">
+        <button class="btn-primario" onclick="abrirMapa()">
+            <i class="fa-solid fa-map-location-dot"></i>
+            Encontrar Unidades
+        </button>
+        <button class="btn-secundario" onclick="agendarDoacao()">
+            <i class="fa-regular fa-calendar-days"></i>
+            Agendar Doação
+        </button>
+    </div>
 
-        Nenhum impedimento inicial
-        foi identificado.
-
-    </h2>
-
-    <p>
-
-        Você pode prosseguir para a
-        próxima etapa da triagem
-        presencial.
-
-    </p>
-
-    <button
-    class="btn-vermelho"
-    onclick="abrirMapa()">
-
-        Encontrar Unidades
-
-    </button>
-
-    <button
-    class="btn-branco"
-    onclick="agendarDoacao()">
-
-        Agendar doação
-
-    </button>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

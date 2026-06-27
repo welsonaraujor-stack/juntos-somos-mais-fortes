@@ -1,54 +1,21 @@
-// =====================================
-// VOLTAR PARA RESULTADO APTO
-// =====================================
-
-function inicio(){
-
-    window.location.href =
-    "../../triagem/resultado-apto/index.html";
-
+function selecionarUnidade(nome) {
+    localStorage.setItem('unidadeSelecionada', nome);
+    window.location.href = 'agendamento.html';
 }
 
-
-// =====================================
-// SELECIONAR UNIDADE
-// =====================================
-
-function selecionarUnidade(unidade){
-
-    localStorage.setItem(
-        "unidade",
-        unidade
-    );
-
-    window.location.href =
-    "../agendamento/index.html";
-
+function agendar(nome) {
+    localStorage.setItem('unidadeSelecionada', nome);
+    window.location.href = 'agendamento.html';
 }
 
-
-// =====================================
-// MENU AGENDAR
-// =====================================
-
-function agendar(){
-
-    const unidade =
-    localStorage.getItem(
-    "unidade"
-    );
-
-    if(!unidade){
-
-        alert(
-        "Selecione uma unidade primeiro."
-        );
-
-        return;
-
-    }
-
-    window.location.href =
-    "../agendamento/index.html";
-
+function inicio() {
+    window.location.href = 'index.html';
 }
+
+// Filtros rápidos
+document.querySelectorAll('.filtro-tag').forEach(btn => {
+    btn.addEventListener('click', function () {
+        document.querySelectorAll('.filtro-tag').forEach(b => b.classList.remove('ativo'));
+        this.classList.add('ativo');
+    });
+});

@@ -1,61 +1,16 @@
-// ========================================
-// TELA: QUEM É VOCÊ?
-// ========================================
-
-// Esta função é chamada pelo onclick
-// de cada card da tela
-
 function selecionar(tipoPerfil) {
+    localStorage.setItem('perfil', tipoPerfil);
 
-    // Salva o perfil escolhido
-    localStorage.setItem(
-        "perfil",
-        tipoPerfil
-    );
+    const rotas = {
+        'Pessoa':      '../../perfis/pessoa/index.html',
+        'Grupo':       '../../perfis/grupo/index.html',
+        'Instituição': '../../perfis/instituicao/index.html',
+        'Parceiro':    '../../perfis/parceiro/index.html'
+    };
 
-    console.log(
-        "Perfil selecionado:",
-        tipoPerfil
-    );
-
-    // Redireciona para a tela correta
-
-    switch (tipoPerfil) {
-
-        case "Pessoa":
-
-            window.location.href =
-            "../../perfis/pessoa/index.html";
-
-            break;
-
-        case "Grupo":
-
-            window.location.href =
-            "../../perfis/grupo/index.html";
-
-            break;
-
-        case "Instituição":
-
-            window.location.href =
-            "../../perfis/instituicao/index.html";
-
-            break;
-
-        case "Parceiro":
-
-            window.location.href =
-            "../../perfis/parceiro/index.html";
-
-            break;
-
-        default:
-
-            alert(
-                "Perfil inválido."
-            );
-
+    if (rotas[tipoPerfil]) {
+        window.location.href = rotas[tipoPerfil];
+    } else {
+        alert('Perfil inválido.');
     }
-
 }

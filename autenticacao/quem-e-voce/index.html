@@ -1,99 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Quem é Você?</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem é Você?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <div class="card-principal">
+    <header>
+        <a href="login.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Como deseja participar?</h1>
+            <p>Escolha uma opção para continuar</p>
+        </div>
+    </header>
 
-        <h1>Como deseja participar?</h1>
+    <div class="opcoes">
 
-        <p class="subtitulo">
-            Escolha uma opção para continuar
-        </p>
-
-        <div class="opcao pessoa" onclick="selecionar('Pessoa')">
-
-            <div class="icone">
+        <div class="opcao" onclick="selecionar('Pessoa')">
+            <div class="opcao-icone vermelho">
                 <i class="fa-solid fa-user"></i>
             </div>
-
-            <div>
+            <div class="opcao-texto">
                 <h2>PESSOA</h2>
                 <span>Quero doar sangue</span>
             </div>
-
+            <i class="fa-solid fa-chevron-right seta"></i>
         </div>
 
-        <div class="opcao grupo" onclick="selecionar('Grupo')">
-
-            <div class="icone">
+        <div class="opcao" onclick="selecionar('Grupo')">
+            <div class="opcao-icone laranja">
                 <i class="fa-solid fa-users"></i>
             </div>
-
-            <div>
+            <div class="opcao-texto">
                 <h2>GRUPO</h2>
                 <span>Represento um grupo ou comunidade</span>
             </div>
-
+            <i class="fa-solid fa-chevron-right seta"></i>
         </div>
 
-        <div class="opcao instituicao" onclick="selecionar('Instituição')">
-
-            <div class="icone">
+        <div class="opcao" onclick="selecionar('Instituição')">
+            <div class="opcao-icone azul">
                 <i class="fa-solid fa-building"></i>
             </div>
-
-            <div>
+            <div class="opcao-texto">
                 <h2>INSTITUIÇÃO</h2>
                 <span>Represento uma empresa, escola ou organização</span>
             </div>
-
+            <i class="fa-solid fa-chevron-right seta"></i>
         </div>
 
-        <div class="opcao parceiro" onclick="selecionar('Parceiro')">
-
-            <div class="icone">
+        <div class="opcao" onclick="selecionar('Parceiro')">
+            <div class="opcao-icone roxo">
                 <i class="fa-solid fa-handshake"></i>
             </div>
-
-            <div>
+            <div class="opcao-texto">
                 <h2>PARCEIRO</h2>
                 <span>Quero apoiar e fazer parte desta causa</span>
             </div>
-
+            <i class="fa-solid fa-chevron-right seta"></i>
         </div>
 
-        <div class="rodape">
+    </div>
 
-            <span>
-                Você poderá alterar depois.
-            </span>
+    <div class="info-box">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>Você poderá alterar seu perfil depois nas configurações.</p>
+    </div>
 
-            <i class="fa-solid fa-circle-info"></i>
-
+    <div class="rodape">
+        <div class="gota">
+            <i class="fa-solid fa-droplet"></i>
         </div>
-
+        <p><strong>Juntos Somos Mais Fortes.</strong></p>
+        <span>Doe sangue. Doe esperança. Salve vidas.</span>
     </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

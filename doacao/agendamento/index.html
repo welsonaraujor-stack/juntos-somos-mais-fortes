@@ -1,108 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Agendamento</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <a href="../../doacao/mapa-unidades/index.html" class="voltar">
+    <header>
+        <a href="mapa-unidades.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Agendar Doação</h1>
+            <p>Escolha o melhor horário para você.</p>
+        </div>
+    </header>
 
-        <i class="fa-solid fa-arrow-left"></i>
-
-    </a>
-
-    <h1>
-
-        Escolha o melhor<br>
-        horário para você
-
-    </h1>
+    <!-- LOCAL -->
     <div class="local">
+        <img id="imagemUnidade"
+            src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400"
+            alt="Unidade móvel">
+        <div class="local-info">
+            <h3 id="nomeUnidade">Parque Ibirapuera</h3>
+            <p id="enderecoUnidade">
+                <i class="fa-solid fa-location-dot"></i>
+                Av. Pedro Álvares Cabral
+            </p>
+            <div class="local-tags">
+                <span class="tag verde">
+                    <i class="fa-solid fa-circle"></i>
+                    15 vagas
+                </span>
+                <span class="tag cinza">
+                    <i class="fa-solid fa-clock"></i>
+                    08h às 17h
+                </span>
+            </div>
+        </div>
+    </div>
 
-    <img
-    id="imagemUnidade"
-    src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400">
-
-    <div>
-
-        <h3 id="nomeUnidade">
-            Carregando...
-        </h3>
-
-        <p id="enderecoUnidade">
-            Carregando endereço...
+    <!-- DATA -->
+    <div class="secao">
+        <p class="secao-titulo">
+            <i class="fa-solid fa-calendar-days"></i>
+            Escolha uma data
         </p>
-
-        <strong id="infoUnidade">
-            Carregando informações...
-        </strong>
-
+        <input type="date" id="data" class="campo-data">
     </div>
 
-</div>
-    
-    <h2>Escolha uma data</h2>
-
-    <input
-    type="date"
-    id="data"
-    class="campo-data">
-
-    <h2>Horários disponíveis</h2>
-
-    <div class="horarios">
-
-        <button class="ativo">08:00</button>
-
-        <button>09:00</button>
-
-        <button>10:00</button>
-
-        <button>11:00</button>
-
-        <button>13:00</button>
-
-        <button>14:00</button>
-
-        <button>15:00</button>
-
-        <button>16:00</button>
-
+    <!-- HORÁRIOS -->
+    <div class="secao">
+        <p class="secao-titulo">
+            <i class="fa-solid fa-clock"></i>
+            Horários disponíveis
+        </p>
+        <div class="horarios">
+            <button class="horario ativo" onclick="selecionarHorario(this)">08:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">09:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">10:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">11:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">13:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">14:00</button>
+            <button class="horario" onclick="selecionarHorario(this)">15:00</button>
+            <button class="horario indisponivel" disabled>16:00</button>
+        </div>
+        <p class="legenda">
+            <span class="leg-item">
+                <span class="leg-cor vermelho"></span> Selecionado
+            </span>
+            <span class="leg-item">
+                <span class="leg-cor cinza"></span> Disponível
+            </span>
+            <span class="leg-item">
+                <span class="leg-cor riscado"></span> Indisponível
+            </span>
+        </p>
     </div>
 
-    <button
-    class="confirmar"
-    onclick="confirmarAgendamento()">
+    <!-- RESUMO -->
+    <div class="resumo" id="resumo">
+        <p class="resumo-titulo">Resumo do agendamento</p>
+        <div class="resumo-linha">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="resumoLocal">Parque Ibirapuera</span>
+        </div>
+        <div class="resumo-linha">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span id="resumoData">—</span>
+        </div>
+        <div class="resumo-linha">
+            <i class="fa-solid fa-clock"></i>
+            <span id="resumoHorario">08:00</span>
+        </div>
+    </div>
 
-        Confirmar Agendamento
-
-    </button>
-
+    <!-- AVISO -->
     <div class="aviso">
-
-        <i class="fa-regular fa-clock"></i>
-
-        Chegue com 15 min de antecedência.
-
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>Chegue com <strong>15 minutos</strong> de antecedência e traga um documento com foto.</p>
     </div>
+
+    <!-- BOTÃO -->
+    <button class="btn-confirmar" onclick="confirmarAgendamento()">
+        <i class="fa-solid fa-calendar-check"></i>
+        Confirmar Agendamento
+    </button>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

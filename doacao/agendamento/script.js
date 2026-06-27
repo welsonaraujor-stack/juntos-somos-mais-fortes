@@ -1,209 +1,32 @@
-// =====================================
-// AGENDAMENTO
-// =====================================
-
-// Horário selecionado
-// ==============================
-// CARREGAR UNIDADE ESCOLHIDA
-// ==============================
-
-const unidade =
-localStorage.getItem("unidade");
-
-if(unidade){
-
-    document.getElementById(
-    "nomeUnidade"
-    ).innerText = unidade;
-
-    if(unidade === "Parque Ibirapuera"){
-
-        document.getElementById(
-        "enderecoUnidade"
-        ).innerText =
-        "Av. Pedro Álvares Cabral";
-
-        document.getElementById(
-        "infoUnidade"
-        ).innerText =
-        "08h às 17h";
-        
-        document.getElementById(
-        "imagemUnidade"
-        ).src =
-        "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400";
-    }
-
-    if(unidade === "Shopping Tatuapé"){
-
-        document.getElementById(
-        "enderecoUnidade"
-        ).innerText =
-        "Rua Domingos Agostim"
-
-        document.getElementById(
-        "infoUnidade"
-        ).innerText =
-        "09h às 16h";
-
-        document.getElementById(
-        "imagemUnidade"
-        ).src =
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400";
-
-    }
-
-    if(unidade === "Universidade Paulista"){
-
-        document.getElementById(
-        "enderecoUnidade"
-        ).innerText =
-        "Av. Paulista, 1000";
-
-        document.getElementById(
-        "infoUnidade"
-        ).innerText =
-        "08h às 18h";
-        
-        document.getElementById(
-        "imagemUnidade"
-        ).src =
-        "https://images.unsplash.com/photo-1562774053-701939374585?w=400";
-    }
-
+// Seleciona horário
+function selecionarHorario(btn) {
+    document.querySelectorAll('.horario').forEach(b => b.classList.remove('ativo'));
+    btn.classList.add('ativo');
+    document.getElementById('resumoHorario').textContent = btn.textContent;
 }
 
-let horarioSelecionado = "080:00";
-
-
-// ==============================
-// SELEÇÃO DE HORÁRIOS
-// ==============================
-
-const horarios =
-document.querySelectorAll(
-".horarios button"
-);
-
-horarios.forEach(botao => {
-
-    botao.addEventListener(
-    "click",
-    () => {
-
-        horarios.forEach(b => {
-
-            b.classList.remove(
-            "ativo"
-            );
-
-        });
-
-        botao.classList.add(
-        "ativo"
-        );
-
-        horarioSelecionado =
-        botao.innerText;
-
+// Atualiza resumo ao mudar data
+document.getElementById('data').addEventListener('change', function () {
+    const data = new Date(this.value + 'T00:00:00');
+    const formatada = data.toLocaleDateString('pt-BR', {
+        weekday: 'long', day: '2-digit', month: 'long'
     });
-
+    document.getElementById('resumoData').textContent = formatada;
 });
 
+// Confirmar agendamento
+function confirmarAgendamento() {
+    const data = document.getElementById('data').value;
+    const horario = document.querySelector('.horario.ativo')?.textContent;
 
-
-
-// ==============================
-// CONFIRMAR AGENDAMENTO
-// ==============================
-
-function confirmarAgendamento(){
-
-    const data =
-    document.getElementById(
-    "data"
-    ).value;
-
-    if(data === ""){
-
-        alert(
-        "Escolha uma data."
-        );
-
+    if (!data) {
+        alert('Por favor, escolha uma data.');
         return;
-
     }
 
-    if(horarioSelecionado === ""){
+    localStorage.setItem('agendamentoData', data);
+    localStorage.setItem('agendamentoHorario', horario);
+    localStorage.setItem('agendamentoLocal', document.getElementById('nomeUnidade').textContent);
 
-        alert(
-        "Escolha um horário."
-        );
-
-        return;
-
-    }
-    const partes =
-    data.split("-");
-
-    const dataBrasil =
-    `${partes[2]}/${partes[1]}/${partes[0]}`;
-
-    localStorage.setItem(
-    "dataDoacao",
-    dataBrasil
-    );
-    
-
-    localStorage.setItem(
-    "horarioDoacao",
-    horarioSelecionado
-    );
-    // =====================
-// SALVAR HISTÓRICO
-// =====================
-
-    const historico =
-
-    JSON.parse(
-    localStorage.getItem(
-    "historicoDoacoes"
-    )
-    ) || [];
-
-    historico.push({
-
-    unidade:
-    localStorage.getItem(
-    "unidade"
-    ),
-
-    data:
-    dataBrasil,
-
-    horario:
-    horarioSelecionado,
-
-    status:
-    "Confirmado"
-
-    });
-
-    localStorage.setItem(
-
-    "historicoDoacoes",
-
-    JSON.stringify(
-    historico
-    )
-
-);
-
-    window.location.href =
-    "../confirmacao/index.html";
-
+    window.location.href = 'confirmacao.html';
 }
-// AGENDAR
-document.getElementById("btnAgendar").onclick = () => {
-    window.location.href = "../agendamento/index.html";
-};

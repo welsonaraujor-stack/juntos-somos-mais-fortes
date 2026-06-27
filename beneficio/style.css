@@ -28,6 +28,50 @@ header {
     justify-content: center;
     margin-bottom: 25px;
 }
+/* ===========================
+      BOAS-VINDAS
+=========================== */
+
+.boas-vindas{
+    padding:20px;
+}
+
+.boas-vindas h2{
+    font-size:24px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:8px;
+}
+
+.boas-vindas span{
+
+    display:inline-block;
+
+    background:#ffebee;
+
+    color:#d50000;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.boas-vindas p{
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:22px;
+
+}
 
 .perfil img {
     width: 70px;

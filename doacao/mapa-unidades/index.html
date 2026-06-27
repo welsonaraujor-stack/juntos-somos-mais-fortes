@@ -1,220 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Unidades Próximas</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades Próximas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <h1>
-
-        Encontre uma<br>
-        unidade perto de você
-
-    </h1>
-
-    <div class="cidade">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        São Paulo - SP
-
+    <!-- HEADER -->
+    <header>
+        <div class="header-texto">
+            <h1>Encontre uma unidade perto de você</h1>
+            <div class="cidade">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>São Paulo - SP</span>
+            </div>
+        </div>
         <button class="filtro">
-
             <i class="fa-solid fa-sliders"></i>
-
         </button>
+    </header>
 
+    <!-- BUSCA -->
+    <div class="busca-wrapper">
+        <i class="fa-solid fa-magnifying-glass busca-icone"></i>
+        <input type="text" class="busca" placeholder="Buscar por bairro ou endereço...">
     </div>
 
+    <!-- MAPA -->
     <div class="mapa">
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200" alt="Mapa">
+        <div class="mapa-overlay">
+            <div class="mapa-pin">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>3 unidades próximas</span>
+            </div>
+        </div>
+    </div>
 
-        <img
-        src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200"
-        alt="Mapa">
+    <!-- FILTROS RÁPIDOS -->
+    <div class="filtros">
+        <button class="filtro-tag ativo">Todas</button>
+        <button class="filtro-tag">Hoje</button>
+        <button class="filtro-tag">Esta semana</button>
+        <button class="filtro-tag">Com vagas</button>
+    </div>
 
+    <!-- TÍTULO LISTA -->
+    <div class="lista-titulo">
+        <span>Unidades disponíveis</span>
+        <span class="lista-total">3 encontradas</span>
     </div>
 
     <!-- UNIDADE 1 -->
-
-    <div
-    class="card-unidade"
-    onclick="selecionarUnidade('Parque Ibirapuera')">
-
-        <img
-        src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=500">
-
+    <div class="card-unidade" onclick="selecionarUnidade('Parque Ibirapuera')">
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=500" alt="Ônibus">
         <div class="info-unidade">
-
-            <h3>Parque Ibirapuera</h3>
-
+            <div class="unidade-topo">
+                <h3>Parque Ibirapuera</h3>
+                <span class="vagas verde">15 vagas</span>
+            </div>
             <p>
-
                 <i class="fa-solid fa-location-dot"></i>
-
                 Av. Pedro Álvares Cabral
-
             </p>
-
             <p>
-
                 <i class="fa-regular fa-calendar"></i>
-
-                10/06/2026
-
+                10/06/2026 · 08h às 17h
             </p>
-
-            <span>
-
-                15 vagas disponíveis
-
-            </span>
-
+            <button class="btn-agendar" onclick="event.stopPropagation(); agendar('Parque Ibirapuera')">
+                Agendar
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-
     </div>
 
     <!-- UNIDADE 2 -->
-
-    <div
-    class="card-unidade"
-    onclick="selecionarUnidade('Shopping Tatuapé')">
-
-        <img
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500">
-
+    <div class="card-unidade" onclick="selecionarUnidade('Shopping Tatuapé')">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500" alt="Shopping">
         <div class="info-unidade">
-
-            <h3>Shopping Tatuapé</h3>
-
+            <div class="unidade-topo">
+                <h3>Shopping Tatuapé</h3>
+                <span class="vagas verde">20 vagas</span>
+            </div>
             <p>
-
                 <i class="fa-solid fa-location-dot"></i>
-
                 Rua Domingos Agostim
-
             </p>
-
             <p>
-
                 <i class="fa-regular fa-calendar"></i>
-
-                11/06/2026
-
+                11/06/2026 · 09h às 16h
             </p>
-
-            <span>
-
-                20 vagas disponíveis
-
-            </span>
-
+            <button class="btn-agendar" onclick="event.stopPropagation(); agendar('Shopping Tatuapé')">
+                Agendar
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-
     </div>
 
     <!-- UNIDADE 3 -->
-
-    <div
-    class="card-unidade"
-    onclick="selecionarUnidade('Universidade Paulista')">
-
-        <img
-        src="https://images.unsplash.com/photo-1562774053-701939374585?w=500">
-
+    <div class="card-unidade" onclick="selecionarUnidade('Universidade Paulista')">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=500" alt="Universidade">
         <div class="info-unidade">
-
-            <h3>Universidade Paulista</h3>
-
+            <div class="unidade-topo">
+                <h3>Universidade Paulista</h3>
+                <span class="vagas amarelo">12 vagas</span>
+            </div>
             <p>
-
                 <i class="fa-solid fa-location-dot"></i>
-
                 Av. Paulista, 1000
-
             </p>
-
             <p>
-
                 <i class="fa-regular fa-calendar"></i>
-
-                12/06/2026
-
+                12/06/2026 · 08h às 15h
             </p>
-
-            <span>
-
-                12 vagas disponíveis
-
-            </span>
-
+            <button class="btn-agendar" onclick="event.stopPropagation(); agendar('Universidade Paulista')">
+                Agendar
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-
     </div>
 
-    <!-- MENU -->
-
-    <div class="menu">
-
-        <div onclick="inicio()">
-
+    <!-- NAV -->
+    <nav>
+        <button onclick="inicio()">
             <i class="fa-solid fa-house"></i>
-
             <span>Início</span>
-
-        </div>
-
-        <div onclick="agendar()">
-
-            <i class="fa-regular fa-calendar"></i>
-
+        </button>
+        <button class="ativo">
+            <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
-
-        </div>
-
-        <div>
-
+        </button>
+        <button>
             <i class="fa-solid fa-droplet"></i>
-
             <span>Doações</span>
-
-        </div>
-
-        <div>
-
-            <i class="fa-solid fa-heart"></i>
-
+        </button>
+        <button>
+            <i class="fa-solid fa-gift"></i>
             <span>Benefícios</span>
-
-        </div>
-
-        <div>
-
+        </button>
+        <button>
             <i class="fa-regular fa-user"></i>
-
             <span>Perfil</span>
-
-        </div>
-
-    </div>
+        </button>
+    </nav>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>

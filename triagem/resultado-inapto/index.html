@@ -1,69 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Resultado da Pré-Triagem</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Pré-Triagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="card">
+<div class="phone">
 
-    <div class="icone">
+    <!-- FOTO -->
+    <div class="foto-wrapper">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Foto do doador">
+        <div class="foto-badge">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+    </div>
 
-        <i class="fa-solid fa-circle-xmark"></i>
+    <p class="nome-doador">João, não se preocupe!</p>
+
+    <!-- BANNER -->
+    <div class="banner-impedido">
+        <div class="banner-icone">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div>
+            <strong>Impedimento temporário identificado</strong>
+            <p>Neste momento você não está apto para doar.</p>
+        </div>
+    </div>
+
+    <!-- MOTIVOS -->
+    <div class="motivos-box">
+        <p class="motivos-titulo">
+            <i class="fa-solid fa-circle-info"></i>
+            Pontos identificados na triagem
+        </p>
+        <div id="listaMotivos">
+            <!-- preenchido pelo JS -->
+        </div>
+    </div>
+
+    <!-- MENSAGEM ENCORAJADORA -->
+    <div class="encorajamento">
+        <div class="encorajamento-icone">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <div>
+            <strong>Isso é temporário!</strong>
+            <p>A maioria dos impedimentos dura poucos dias ou semanas. Em breve você poderá salvar vidas.</p>
+        </div>
+    </div>
+
+    <!-- PRÓXIMOS PASSOS -->
+    <div class="passos">
+        <p class="passos-titulo">O que fazer agora?</p>
+
+        <div class="passo">
+            <div class="passo-icone amarelo">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="passo-info">
+                <strong>Anote a data</strong>
+                <span>Guarde quando poderá tentar novamente</span>
+            </div>
+        </div>
+
+        <div class="passo">
+            <div class="passo-icone azul">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="passo-info">
+                <strong>Ative os alertas</strong>
+                <span>Te avisamos quando estiver apto para doar</span>
+            </div>
+        </div>
+
+        <div class="passo">
+            <div class="passo-icone verde">
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <div class="passo-info">
+                <strong>Convide um amigo</strong>
+                <span>Quem sabe ele pode doar agora por você?</span>
+            </div>
+        </div>
 
     </div>
 
-    <h1>Não Apto</h1>
-
-    <p class="mensagem">
-
-        Neste momento você não está apto para realizar a doação de sangue.
-
-    </p>
-
-    <div class="motivo">
-
-        <i class="fa-solid fa-circle-info"></i>
-
-        Algumas respostas da pré-triagem indicam que você deve aguardar antes de doar.
-
-    </div>
-
+    <!-- BOTÕES -->
     <div class="botoes">
-
-        <button
-        class="refazer"
-        id="btnRefazer">
-
+        <button class="btn-primario" onclick="window.location.href='pergunta1.html'">
+            <i class="fa-solid fa-rotate-left"></i>
             Refazer Triagem
-
         </button>
-
-        <button
-        class="inicio"
-        id="btnInicio">
-
+        <button class="btn-secundario" onclick="window.location.href='index.html'">
+            <i class="fa-solid fa-house"></i>
             Voltar ao Início
-
         </button>
-
     </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

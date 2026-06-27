@@ -1,36 +1,33 @@
-let resposta = "sim";
+function selecionar(opcao) {
+    // Remove selecionado de todos
+    document.querySelectorAll('.opcao').forEach(el => {
+        el.classList.remove('selecionado');
+        el.querySelector('.check-icone').className = 'fa-regular fa-circle check-icone';
+    });
 
-function selecionar(opcao){
+    // Marca o selecionado
+    const el = document.getElementById(opcao);
+    el.classList.add('selecionado');
+    el.querySelector('.check-icone').className = 'fa-solid fa-circle-check check-icone';
 
-    document
-    .getElementById("sim")
-    .classList.remove("selecionado");
-
-    document
-    .getElementById("nao")
-    .classList.remove("selecionado");
-
-    document
-    .getElementById(opcao)
-    .classList.add("selecionado");
-
-    resposta = opcao;
+    // Mostra toggle só se escolheu sim
+    const box = document.getElementById('notificarBox');
+    if (opcao === 'sim') {
+        box.classList.add('visivel');
+    } else {
+        box.classList.remove('visivel');
+    }
 }
 
-function continuar(){
-
-    if(resposta === "sim"){
-
-        alert(
-        "Obrigado por registrar seu interesse em ser doador de órgãos."
-        );
-
-    }else{
-
-        alert(
-        "Você poderá alterar essa escolha futuramente."
-        );
-
+function continuar() {
+    const selecionado = document.querySelector('.opcao.selecionado');
+    if (!selecionado) {
+        alert('Por favor, selecione uma opção.');
+        return;
     }
-
-}SW
+    const notificar = document.getElementById('toggleNotificar').checked;
+    // salva no localStorage
+    localStorage.setItem('doacaoOrgaos', selecionado.id);
+    localStorage.setItem('notificarContatos', notificar);
+    window.location.href = 'contato-emergencia.html';
+}
