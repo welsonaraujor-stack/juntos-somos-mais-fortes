@@ -1,43 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pré-Triagem</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Triagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="card">
+<div class="phone">
 
-    <a href="pergunta3.html" class="voltar">
-        <i class="fa-solid fa-arrow-left"></i>
-    </a>
-
-    <div class="contador">
-        4 de 8
+    <div class="topo">
+        <a href="quem-e-voce.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="topo-centro">
+            <div class="icone">
+                <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+        
+        </div>
+        <span class="contador">4 de 8</span>
     </div>
 
     <div class="barra">
-
-        <div class="progresso progresso4"></div>
-
+        <div class="progresso p4"></div>
     </div>
 
-    <img
-    src="imagens/gripe.PNG"
-    class="imagem">
+    <img src="imagens/gripe.PNG" class="imagem" alt="Balança">
 
-    <h1>
+         <h1>
         Teve <span>gripe</span> ou 
         <span>resfriado</span>
         nas últimas 2 semanas?
@@ -53,34 +47,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </p>
 
     <div class="botoes">
-
-        <button
-        class="sim"
-        onclick="responderSaude('sim')">
-
+        <button class="sim" onclick="responder(1, 'sim')">
             ✔ Sim
-
         </button>
-
-        <button
-        class="nao"
-        onclick="responderSaude('nao')">
-
+        <button class="nao" onclick="responder(1, 'nao')">
             ✖ Não
-
         </button>
-
     </div>
 
     <div class="info">
-
         <i class="fa-solid fa-circle-info"></i>
-
         Aguarde 15 dias após o fim dos sintomas.
-
     </div>
 
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

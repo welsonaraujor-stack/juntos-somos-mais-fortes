@@ -1,122 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Grupo</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <!-- <a href="#" class="voltar"> -->
+    <header>
         <a href="../../autenticacao/quem-e-voce/index.html" class="voltar">
-        <i class="fa-solid fa-arrow-left"></i>
-    </a>
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Perfil — Grupo</h1>
+            <p>Organize uma campanha com seu grupo.</p>
+        </div>
+    </header>
 
-    <div class="perfil">
-
+    <!-- PERFIL -->
+    <div class="perfil-card">
         <div class="avatar">
             <i class="fa-solid fa-users"></i>
         </div>
+        <div class="perfil-info">
+            <span class="perfil-tag">GRUPO</span>
+            <h2>Represento um grupo</h2>
+            <p>Igrejas, associações, clubes e comunidades</p>
+        </div>
+    </div>
 
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="banner-icone">
+            <i class="fa-solid fa-bus"></i>
+        </div>
         <div>
-            <h2>GRUPO</h2>
-            <span>Represento um grupo ou comunidade</span>
+            <strong>Solicite uma unidade móvel</strong>
+            <p>Nossa equipe leva o ônibus até o seu grupo. Rápido e sem burocracia.</p>
+        </div>
+    </div>
+
+    <!-- DADOS DO GRUPO -->
+    <div class="secao-titulo">
+        <i class="fa-solid fa-users"></i>
+        Dados do Grupo
+    </div>
+
+    <div class="formulario">
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <input type="text" id="nomeGrupo" placeholder="Nome do Grupo">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <input type="text" id="nomeResponsavel" placeholder="Nome do Responsável">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <input type="tel" id="telefone" placeholder="Telefone do Responsável">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <input type="email" id="email" placeholder="E-mail">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <input type="text" id="cidade" placeholder="Cidade">
+        </div>
+
+        <!-- TIPO DO GRUPO -->
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-tag"></i>
+            </div>
+            <select id="tipoGrupo">
+                <option value="">Tipo do Grupo</option>
+                <option>Igreja / Comunidade Religiosa</option>
+                <option>Associação de Moradores</option>
+                <option>Clube / Associação</option>
+                <option>Grupo de Voluntários</option>
+                <option>Outro</option>
+            </select>
         </div>
 
     </div>
 
-    <div class="banner">
+    <!-- SOBRE A CAMPANHA -->
+    <div class="secao-titulo">
+        <i class="fa-solid fa-calendar-heart"></i>
+        Sobre a Campanha
+    </div>
 
-        <i class="fa-solid fa-users"></i>
+    <div class="formulario">
 
-        <p>
-            Organize uma campanha de doação
-            com seu grupo ou comunidade.
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-users-line"></i>
+            </div>
+            <input type="number" id="participantes" placeholder="Participantes interessados">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <input type="date" id="dataDesejada">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <input type="text" id="local" placeholder="Endereço do local disponível">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <select id="horarioPreferido">
+                <option value="">Horário preferido</option>
+                <option>Manhã (07h às 12h)</option>
+                <option>Tarde (12h às 18h)</option>
+                <option>Flexível</option>
+            </select>
+        </div>
+
+        <div class="campo-obs">
+            <div class="campo-obs-topo">
+                <i class="fa-solid fa-message"></i>
+                <label>Observações (opcional)</label>
+            </div>
+            <textarea id="observacoes" placeholder="Informações adicionais sobre o local ou campanha..."></textarea>
+        </div>
+
+    </div>
+
+    <!-- IMPACTO ESTIMADO -->
+    <div class="impacto">
+        <p class="impacto-titulo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            Impacto estimado da campanha
         </p>
-
+        <div class="impacto-numeros">
+            <div class="impacto-item">
+                <strong id="estimativaVidas">—</strong>
+                <span>vidas salvas</span>
+            </div>
+            <div class="divisor-v"></div>
+            <div class="impacto-item">
+                <strong id="estimativaDoadores">—</strong>
+                <span>doadores</span>
+            </div>
+            <div class="divisor-v"></div>
+            <div class="impacto-item">
+                <strong id="estimativaMl">—</strong>
+                <span>ml de sangue</span>
+            </div>
+        </div>
     </div>
 
-    <h3>DADOS DO GRUPO</h3>
-
-    <div class="campo">
-        <i class="fa-solid fa-users"></i>
-        <input type="text" placeholder="Nome do Grupo">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Nome do Responsável">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-phone"></i>
-        <input type="text" placeholder="Telefone">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-envelope"></i>
-        <input type="email" placeholder="E-mail">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-users-line"></i>
-        <input type="number" placeholder="Quantidade de Participantes">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-location-dot"></i>
-        <input type="text" placeholder="Cidade">
-    </div>
-
-    <h3>SOBRE A CAMPANHA</h3>
-
-    <div class="campo">
-        <i class="fa-solid fa-users"></i>
-        <input type="number" placeholder="Número de participantes interessados">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-calendar-days"></i>
-        <input type="date">
-    </div>
-
-    <div class="campo">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <input type="text" placeholder="Local disponível">
-    </div>
-
-    <button id="btnGrupo">
-
-        Solicitar Unidade Móvel
-
-        <i class="fa-solid fa-arrow-right"></i>
-
-    </button>
-
-    <div class="info">
-
+    <!-- INFO -->
+    <div class="info-box">
         <i class="fa-solid fa-circle-info"></i>
-
-        Nossa equipe entrará em contato para
-        confirmar os detalhes da sua campanha.
-
+        <p>Nossa equipe entrará em contato em até <strong>48 horas</strong> para confirmar os detalhes da sua campanha.</p>
     </div>
+
+    <!-- BOTÃO -->
+    <button id="btnGrupo" class="btn-solicitar">
+        <i class="fa-solid fa-bus"></i>
+        Solicitar Unidade Móvel
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

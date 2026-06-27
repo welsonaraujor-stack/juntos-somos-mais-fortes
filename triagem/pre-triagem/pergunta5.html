@@ -1,43 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pré-Triagem</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Triagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="card">
+<div class="phone">
 
-    <a href="pergunta4.html" class="voltar">
-        <i class="fa-solid fa-arrow-left"></i>
-    </a>
-
-    <div class="contador">
-        5 de 8
+    <div class="topo">
+        <a href="quem-e-voce.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="topo-centro">
+            <div class="icone">
+                <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+        
+        </div>
+        <span class="contador">5 de 8</span>
     </div>
 
     <div class="barra">
-
-        <div class="progresso progresso5"></div>
-
+        <div class="progresso p5"></div>
     </div>
 
-    <img
-    src="imagens/tatoo.PNG"
-    class="imagem">
+    <img src="imagens/tatoo.PNG" class="imagem" alt="Balança">
 
-    <h1>
+         <h1>
 
       Fez <span>tatuagem</span>
        nos últimos
@@ -54,31 +48,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </p>
 
     <div class="botoes">
-
-        <button
-        class="sim"
-        onclick="responderTatuagem('sim')">
-
+        <button class="sim" onclick="responder(1, 'sim')">
             ✔ Sim
-
         </button>
-
-        <button
-        class="nao"
-        onclick="responderTatuagem('nao')">
-
+        <button class="nao" onclick="responder(1, 'nao')">
             ✖ Não
-
         </button>
-
     </div>
 
     <div class="info">
-
         <i class="fa-solid fa-circle-info"></i>
-
-        Após 12 meses da tatuagem você pode doar normalmente.
-
+         Após 12 meses da tatuagem você pode doar normalmente.
     </div>
 
 </div>

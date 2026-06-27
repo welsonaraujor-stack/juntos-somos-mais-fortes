@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Juntos Somos Mais Fortes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-    <div class="phone">
+<div class="phone">
+<div class="card">
 
-        <div class="card">
-
-            <img src="img/logooo.png" alt="Logo" class="logo">
-
-            <p class="slogan">
-                Uma doação pode<br>
-                salvar muitas vidas.
-            </p>
-
-            <div class="campo">
-
-                <label>E-mail ou CPF</label>
-                <i class="fa-solid fa-user"></i> 
-                <input
-                    type="text"
-                    id="email"
-                    placeholder="Digite seu e-mail ou CPF">
-                
-            </div>
-
-            <div class="campo">
-
-                <label>Senha</label>
-
-                <div class="senha-box">
-                    <i class="fa-solid fa-lock"></i>
-                    <input
-                        type="password"
-                        id="senha"
-                        placeholder="Digite sua senha">
-
-                    <span id="olho">👁️</span>
-
-                </div>
-
-            </div>
-
-            <a href="#" class="esqueceu">
-                Esqueceu sua senha?
-            </a>
-
-            <button id="entrar">
-                Entrar
-            </button>
-
-            <p class="cadastro">
-                Não tem uma conta?
-                <a href="#">Cadastre-se</a>
-            </p>
-
-            <button class="google">
-                Entrar com Google
-            </button>
-
-        </div>
-
+    <!-- LOGO DENTRO DO CARD -->
+    <div class="topo">
+        <img src="img/logooo.png" alt="Logo" class="logo">
+        <p class="slogan">Doe sangue. Salve vidas!</p>
     </div>
 
-    <script src="script.js"></script>
+  
+    <p class="subtitulo">Acesse sua conta para continuar</p>
 
+    <!-- CAMPO E-MAIL -->
+    <div class="campo">
+        <label>E-mail ou CPF</label>
+        <div class="input-wrapper">
+            <i class="fa-solid fa-user input-icone"></i>
+            <input type="text" id="email"
+                placeholder="Digite seu e-mail ou CPF"
+                autocomplete="username">
+        </div>
+    </div>
+
+    <!-- CAMPO SENHA -->
+    <div class="campo">
+        <label>Senha</label>
+        <div class="input-wrapper">
+            <i class="fa-solid fa-lock input-icone"></i>
+            <input type="password" id="senha"
+                placeholder="Digite sua senha"
+                autocomplete="current-password">
+            <button class="olho" id="olho" type="button">
+                <i class="fa-regular fa-eye" id="olhoIcone"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ESQUECEU -->
+    <a href="#" class="esqueceu">Esqueceu sua senha?</a>
+
+    <!-- BOTÃO ENTRAR -->
+    <button id="entrar" class="btn-entrar">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Entrar
+    </button>
+
+    <!-- DIVISOR -->
+    <div class="divisor">
+        <span></span>
+        <p>ou entre com</p>
+        <span></span>
+    </div>
+
+    <!-- REDES -->
+    <div class="redes">
+        <button class="btn-rede google">
+            <i class="fa-brands fa-google"></i>
+            Google
+        </button>
+        <button class="btn-rede facebook">
+            <i class="fa-brands fa-facebook"></i>
+            Facebook
+        </button>
+        <button class="btn-rede apple">
+            <i class="fa-brands fa-apple"></i>
+            Apple
+        </button>
+    </div>
+
+    <!-- CADASTRO -->
+    <p class="cadastro">
+        Ainda não tem conta?
+        <a href="../pre-cadastro/index.html">Cadastre-se</a>
+    </p>
+
+    <!-- INFO BOX DENTRO DO CARD -->
+    <div class="info-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>Seus dados estão protegidos e seguros.</p>
+    </div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>

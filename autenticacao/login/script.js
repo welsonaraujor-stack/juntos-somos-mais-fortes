@@ -1,112 +1,55 @@
-// ========================================
-// MOSTRAR / OCULTAR SENHA
-// ========================================
+// Mostrar / ocultar senha
+const senhaInput = document.getElementById('senha');
+const olhoBtn = document.getElementById('olho');
+const olhoIcone = document.getElementById('olhoIcone');
 
-// Captura o campo senha
-const senha =
-document.getElementById("senha");
-
-// Captura o ícone do olho
-const olho =
-document.getElementById("olho");
-
-// Ao clicar no olho
-olho.addEventListener("click", () => {
-
-    // Se a senha estiver escondida
-    if (senha.type === "password") {
-
-        // Mostra a senha
-        senha.type = "text";
-
-        // Troca o emoji
-        olho.textContent = "🙈";
-
+olhoBtn.addEventListener('click', () => {
+    if (senhaInput.type === 'password') {
+        senhaInput.type = 'text';
+        olhoIcone.className = 'fa-regular fa-eye-slash';
     } else {
-
-        // Esconde a senha novamente
-        senha.type = "password";
-
-        // Volta para o olho normal
-        olho.textContent = "👁️";
-
+        senhaInput.type = 'password';
+        olhoIcone.className = 'fa-regular fa-eye';
     }
-
 });
 
+// Botão entrar
+document.getElementById('entrar').addEventListener('click', () => {
+    const email = document.getElementById('email').value.trim();
+    const senha = document.getElementById('senha').value;
 
-// ========================================
-// VALIDAÇÃO DE LOGIN
-// ========================================
-
-// Captura o botão Entrar
-const botaoEntrar =
-document.getElementById("entrar");
-
-// Quando clicar no botão Entrar
-botaoEntrar.addEventListener("click", () => {
-
-    // Captura o e-mail digitado
-    const email =
-    document.getElementById("email").value;
-
-    // Captura a senha digitada
-    const senhaDigitada =
-    document.getElementById("senha").value;
-
-    // Verifica se o e-mail está vazio
-    if (email === "") {
-
-        alert(
-            "Digite seu e-mail ou CPF."
-        );
-
+    if (!email) {
+        destacarErro('email', 'Digite seu e-mail ou CPF.');
         return;
-
     }
 
-    // Verifica se a senha está vazia
-    if (senhaDigitada === "") {
-
-        alert(
-            "Digite sua senha."
-        );
-
+    if (!senha) {
+        destacarErro('senha', 'Digite sua senha.');
         return;
-
     }
 
-    // ====================================
-    // LOGIN APROVADO
-    // ====================================
-
-    // Salva o usuário temporariamente
-    localStorage.setItem(
-        "usuario",
-        email
-    );
-
-    // Redireciona para a tela
-    // de Pré-Cadastro
-    window.location.href =
-    "../pre-cadastro/index.html";
-
+    localStorage.setItem('usuario', email);
+    window.location.href = '../pre-cadastro/index.html';
 });
 
+// Borda vermelha no campo com erro
+function destacarErro(id, mensagem) {
+    const input = document.getElementById(id);
+    input.style.borderColor = '#d60017';
+    input.focus();
+    input.addEventListener('input', () => {
+        input.style.borderColor = '';
+    }, { once: true });
+    alert(mensagem);
+}
 
-// ========================================
-// BOTÃO GOOGLE
-// ========================================
-
-// Captura o botão Google
-const google =
-document.querySelector(".google");
-
-// Quando clicar no botão Google
-google.addEventListener("click", () => {
-
-    alert(
-        "Integração com Google será implementada futuramente."
-    );
-
+// Redes sociais
+document.querySelector('.google').addEventListener('click', () => {
+    alert('Integração com Google será implementada futuramente.');
+});
+document.querySelector('.facebook').addEventListener('click', () => {
+    alert('Integração com Facebook será implementada futuramente.');
+});
+document.querySelector('.apple').addEventListener('click', () => {
+    alert('Integração com Apple será implementada futuramente.');
 });

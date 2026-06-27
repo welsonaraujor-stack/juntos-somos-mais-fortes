@@ -21,16 +21,20 @@
         </div>
     </header>
 
-    <div class="hero">
-        <div class="hero-icone">
-            <i class="fa-solid fa-user-plus"></i>
-        </div>
-        <div>
-            <strong>Crie sua conta</strong>
-            <p>Preencha os dados abaixo para começar a salvar vidas.</p>
-        </div>
+    <!-- FOTO -->
+    <div class="foto-perfil">
+        <label for="foto" class="foto-label">
+            <img src="img/avatar-default.png" id="preview" alt="Foto do usuário">
+            <div class="editar-foto">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+        </label>
+        <input type="file" id="foto" accept="image/*" hidden>
+        <h3>Adicionar foto</h3>
+        <p>Essa foto aparecerá no seu perfil.</p>
     </div>
 
+    <!-- FORMULÁRIO -->
     <div class="formulario">
 
         <div class="campo">
@@ -77,22 +81,25 @@
 
     </div>
 
+    <!-- INFO -->
     <div class="info-box">
         <i class="fa-solid fa-shield-halved"></i>
         <p>Seus dados são protegidos e usados apenas para a doação de sangue.</p>
     </div>
 
+    <!-- BOTÃO -->
     <button id="continuar" class="btn-continuar">
         <i class="fa-solid fa-arrow-right"></i>
         Continuar
     </button>
 
+    <!-- LOGIN LINK -->
     <p class="login-link">
         Já tem conta?
         <a href="../login/index.html">Fazer login</a>
     </p>
 
-</div>
+</div><!-- FIM .phone -->
 
 <script src="script.js"></script>
 </body>

@@ -1,196 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pessoa</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil — Pessoa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-    <!-- <a href="#" class="voltar"> -->
+    <header>
         <a href="../../autenticacao/quem-e-voce/index.html" class="voltar">
-        <i class="fa-solid fa-arrow-left"></i>
-    </a>
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Perfil do Doador</h1>
+            <p>Complete seus dados para começar.</p>
+        </div>
+    </header>
 
-    <div class="perfil">
-
+    <!-- PERFIL -->
+    <div class="perfil-card">
         <div class="avatar">
             <i class="fa-solid fa-user"></i>
         </div>
-
-        <div>
-            <h2>PESSOA</h2>
-            <h3 id="nomeUsuario">
-             Carregando...
-            </h3>
-            <span>Quero doar sangue</span>
+        <div class="perfil-info">
+            <span class="perfil-tag">PESSOA</span>
+            <h2 id="nomeUsuario">Carregando...</h2>
+            <p>Quero doar sangue</p>
         </div>
-
     </div>
 
+    <!-- BANNER -->
     <div class="banner">
+        <div class="banner-icone">
+            <i class="fa-solid fa-heart-circle-plus"></i>
+        </div>
+        <div>
+            <strong>Junte-se a milhares de doadores</strong>
+            <p>Cada doação pode salvar até 4 vidas.</p>
+        </div>
+    </div>
 
-        <i class="fa-solid fa-heart-circle-plus"></i>
+    <!-- DADOS -->
+    <div class="secao-titulo">
+        <i class="fa-solid fa-user-pen"></i>
+        Seus dados
+    </div>
 
-        <p>
-            Junte-se a milhares de doadores
-            e ajude a salvar vidas.
-        </p>
+    <div class="formulario">
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" id="nomeCompleto" placeholder="Nome Completo">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-id-card"></i>
+            </div>
+            <input type="text" id="cpfUsuario" placeholder="CPF">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <input type="date" id="dataNascimento">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <input type="tel" id="telefoneUsuario" placeholder="Telefone">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <input type="email" id="emailUsuario" placeholder="E-mail">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <input type="text" id="cidadeUsuario" placeholder="Cidade">
+        </div>
+
+        <div class="campo">
+            <div class="campo-icone">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <select id="tipoSanguineo">
+                <option value="">Tipo Sanguíneo (opcional)</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+        </div>
 
     </div>
 
-    <h3>SEUS DADOS</h3>
-
-    <div class="campo">
-
-        <i class="fa-solid fa-user"></i>
-
-        <input
-        type="text"
-        id="nomeCompleto"
-        placeholder="Nome Completo">
-
+    <!-- SEGURANÇA -->
+    <div class="info-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>Seus dados estão protegidos e usados apenas para a doação de sangue.</p>
     </div>
 
-    <div class="campo">
-
-        <i class="fa-solid fa-id-card"></i>
-
-        <input
-        type="text"
-        id="cpfUsuario"
-        placeholder="CPF">
-
-    </div>
-
-    <div class="campo">
-
-        <i class="fa-solid fa-calendar-days"></i>
-
-        <input
-        type="date"
-        id="dataNascimento">
-
-
-    </div>
-
-    <div class="campo">
-
-        <i class="fa-solid fa-phone"></i>
-
-        <input
-        type="text"
-        id="telefoneUsuario"
-        placeholder="Telefone">
-
-    </div>
-
-    <div class="campo">
-
-        <i class="fa-solid fa-envelope"></i>
-
-        <input
-        type="email"
-        id="emailUsuario"
-        placeholder="E-mail">
-
-    </div>
-
-    <div class="campo">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        <input
-        type="text"
-        id="cidadeUsuario"
-        placeholder="Cidade">
-
-    </div>
-
-    <div class="campo">
-
-        <i class="fa-solid fa-droplet"></i>
-
-        <select>
-
-            <option>
-                Tipo Sanguíneo (opcional)
-            </option>
-
-            <option>A+</option>
-            <option>A-</option>
-            <option>B+</option>
-            <option>B-</option>
-            <option>AB+</option>
-            <option>AB-</option>
-            <option>O+</option>
-            <option>O-</option>
-
-        </select>
-
-    </div>
-
-    <div class="seguranca">
-
-        <i class="fa-regular fa-shield-heart"></i>
-
-        Seus dados estão seguros conosco.
-
-    </div>
-
-    <button id="btnTriagem">
-
+    <!-- BOTÃO -->
+    <button id="btnTriagem" class="btn-triagem">
+        <i class="fa-solid fa-clipboard-check"></i>
         Iniciar Pré-Triagem
-
         <i class="fa-solid fa-arrow-right"></i>
-
     </button>
-
-    <h3>FUNCIONALIDADES</h3>
-
-    <div class="funcionalidades">
-
-        <div class="card">
-            <i class="fa-solid fa-droplet"></i>
-            <span>Histórico de Doações</span>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-wallet"></i>
-            <span>Carteira do Doador</span>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-users"></i>
-            <span>Convide Amigos</span>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-heart"></i>
-            <span>Doação de Órgãos</span>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span>Agendamentos</span>
-        </div>
-
-    </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

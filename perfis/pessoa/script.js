@@ -1,115 +1,25 @@
-// =============================
-// RECUPERAR DADOS DO CADASTRO
-// =============================
+// Recupera dados do cadastro
+const campos = {
+    nomeCompleto:   'nome',
+    cpfUsuario:     'cpf',
+    dataNascimento: 'nascimento',
+    telefoneUsuario:'telefone',
+    cidadeUsuario:  'cidade',
+    emailUsuario:   'usuario'
+};
 
-const nome =
-localStorage.getItem("nome");
-
-const cpf =
-localStorage.getItem("cpf");
-
-const nascimento =
-localStorage.getItem("nascimento");
-
-const telefone =
-localStorage.getItem("telefone");
-
-const cidade =
-localStorage.getItem("cidade");
-
-const email =
-localStorage.getItem("usuario");
-
-if(nome){
-
-    document.getElementById(
-    "nomeCompleto"
-    ).value = nome;
-
-}
-
-if(cpf){
-
-    document.getElementById(
-    "cpfUsuario"
-    ).value = cpf;
-
-}
-
-if(nascimento){
-
-    document.getElementById(
-    "dataNascimento"
-    ).value = nascimento;
-
-}
-
-if(telefone){
-
-    document.getElementById(
-    "telefoneUsuario"
-    ).value = telefone;
-
-}
-
-if(cidade){
-
-    document.getElementById(
-    "cidadeUsuario"
-    ).value = cidade;
-
-}
-
-if(email){
-
-    document.getElementById(
-    "emailUsuario"
-    ).value = email;
-
-}
-
-const botao =
-document.getElementById("btnTriagem");
-
-botao.addEventListener("click", () => {
-
-    alert(
-        "Indo para a Pré-Triagem..."
-    );
-
-    // Futuro
-
-    // window.location.href =
-    // "pre-triagem.html";
-
+Object.entries(campos).forEach(([id, key]) => {
+    const valor = localStorage.getItem(key);
+    const el = document.getElementById(id);
+    if (valor && el) el.value = valor;
 });
-// ============================
-// CARREGAR USUÁRIO LOGADO
-// ============================
 
-const usuario = localStorage.getItem("usuario");
+// Nome no perfil
+const nome = localStorage.getItem('nome');
+const usuario = localStorage.getItem('usuario');
+document.getElementById('nomeUsuario').innerText = nome || usuario || 'Usuário';
 
-if(usuario){
-
-    document.getElementById(
-        "nomeUsuario"
-    ).innerText = usuario;
-
-}
-// ============================
-// INICIAR PRÉ-TRIAGEM
-// ============================
-
-const btnTriagem =
-document.getElementById(
-"btnTriagem"
-);
-
-btnTriagem.addEventListener(
-"click",
-() => {
-
-    window.location.href =
-    "../../triagem/pre-triagem/pergunta1.html";
-
+// Botão triagem
+document.getElementById('btnTriagem').addEventListener('click', () => {
+    window.location.href = '../../triagem/pre-triagem/pergunta1.html';
 });

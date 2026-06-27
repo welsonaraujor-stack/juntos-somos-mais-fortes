@@ -1,3 +1,14 @@
+// Preview da foto
+document.getElementById('foto').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            document.getElementById('preview').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
 // Recupera e-mail do login se existir
 const usuario = localStorage.getItem('usuario');
 const campoEmail = document.getElementById('email');
