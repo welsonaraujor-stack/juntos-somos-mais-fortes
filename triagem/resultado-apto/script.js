@@ -1,13 +1,36 @@
-function abrirMapa(){
+// ============================================================
+// RESULTADO APTO — script.js
+// ============================================================
 
-    window.location.href =
-    "../../doacao/mapa-unidades/index.html";
+// ------------------------------------------------------------
+// 1. PREENCHER NOME DO USUÁRIO
+// ------------------------------------------------------------
+const nome    = localStorage.getItem('nome');
+const usuario = localStorage.getItem('usuario');
+const nomeEl  = document.querySelector('.nome-doador');
 
+if (nomeEl) {
+    const primeiroNome = (nome || usuario || 'Você').split(' ')[0];
+    nomeEl.textContent = `${primeiroNome}, você está apto!`;
 }
 
-function agendarDoacao(){
+// ------------------------------------------------------------
+// 2. FOTO DO USUÁRIO (se tiver salvo)
+// ------------------------------------------------------------
+const fotoSalva = localStorage.getItem('fotoPerfil');
+const fotoEl    = document.querySelector('.foto-wrapper img');
 
-    window.location.href =
-    "../triagem/agendamento/index.html";
+if (fotoSalva && fotoEl) {
+    fotoEl.src = fotoSalva;
+}
 
+// ------------------------------------------------------------
+// 3. NAVEGAÇÃO
+// ------------------------------------------------------------
+function abrirMapa() {
+    window.location.href = '../../doacao/mapa-unidades/index.html';
+}
+
+function agendarDoacao() {
+    window.location.href = '../../doacao/agendamento/index.html';
 }

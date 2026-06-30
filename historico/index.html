@@ -1,32 +1,87 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Histórico de Doações</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Doações</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="phone">
 
-<h1>
-    Histórico de Doações
-</h1>
+    <header>
+        <a href="../../doador/carteira-doador/index.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="header-texto">
+            <h1>Histórico de Doações</h1>
+            <p>Todas as suas doações registradas.</p>
+        </div>
+    </header>
 
-<div id="listaHistorico">
+    <!-- RESUMO -->
+    <div class="resumo">
+        <div class="resumo-item">
+            <div class="resumo-icone vermelho">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <strong id="totalDoacoes">0</strong>
+            <span>Doações</span>
+        </div>
+        <div class="divisor-v"></div>
+        <div class="resumo-item">
+            <div class="resumo-icone rosa">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <strong id="totalVidas">0</strong>
+            <span>Vidas salvas</span>
+        </div>
+        <div class="divisor-v"></div>
+        <div class="resumo-item">
+            <div class="resumo-icone azul">
+                <i class="fa-solid fa-flask"></i>
+            </div>
+            <strong id="totalMl">0ml</strong>
+            <span>Sangue doado</span>
+        </div>
+    </div>
 
-</div>
+    <!-- LISTA -->
+    <div class="lista-titulo">
+        <span>Suas doações</span>
+        <span class="lista-total" id="contador">0 registros</span>
+    </div>
+
+    <div id="listaHistorico"></div>
+
+    <!-- NAV -->
+    <nav>
+        <button onclick="window.location.href='../../doador/carteira-doador/index.html'">
+            <i class="fa-solid fa-house"></i>
+            <span>Início</span>
+        </button>
+        <button onclick="window.location.href='../../doacao/mapa-unidades/index.html'">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>Agendar</span>
+        </button>
+        <button class="ativo">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Doações</span>
+        </button>
+        <button onclick="window.location.href='../impacto-social/index.html'">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Impacto</span>
+        </button>
+        <button onclick="window.location.href='../../beneficio/index.html'">
+            <i class="fa-solid fa-gift"></i>
+            <span>Benefícios</span>
+        </button>
+    </nav>
 
 </div>
 
 <script src="script.js"></script>
-
-</body> 
+</body>
 </html>

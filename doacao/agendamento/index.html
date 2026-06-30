@@ -12,7 +12,7 @@
 <div class="phone">
 
     <header>
-        <a href="mapa-unidades.html" class="voltar">
+        <a href="../mapa-unidades/index.html" class="voltar">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
         <div class="header-texto">
@@ -61,15 +61,39 @@
             Horários disponíveis
         </p>
         <div class="horarios">
-            <button class="horario ativo" onclick="selecionarHorario(this)">08:00</button>
-            <button class="horario" onclick="selecionarHorario(this)">09:00</button>
-            <button class="horario" onclick="selecionarHorario(this)">10:00</button>
-            <button class="horario" onclick="selecionarHorario(this)">11:00</button>
-            <button class="horario" onclick="selecionarHorario(this)">13:00</button>
-            <button class="horario" onclick="selecionarHorario(this)">14:00</button>
-            <button class="horario" onclick="selecionarHorario(this)">15:00</button>
-            <button class="horario indisponivel" disabled>16:00</button>
-        </div>
+    <button class="horario ativo" onclick="selecionarHorario(this)" data-vagas="8">
+        08:00
+        <span class="vagas-horario">8 vagas</span>
+    </button>
+    <button class="horario" onclick="selecionarHorario(this)" data-vagas="6">
+        09:00
+        <span class="vagas-horario">6 vagas</span>
+    </button>
+    <button class="horario" onclick="selecionarHorario(this)" data-vagas="10">
+        10:00
+        <span class="vagas-horario">10 vagas</span>
+    </button>
+    <button class="horario" onclick="selecionarHorario(this)" data-vagas="3">
+        11:00
+        <span class="vagas-horario">3 vagas</span>
+    </button>
+    <button class="horario" onclick="selecionarHorario(this)" data-vagas="7">
+        13:00
+        <span class="vagas-horario">7 vagas</span>
+    </button>
+    <button class="horario" onclick="selecionarHorario(this)" data-vagas="5">
+        14:00
+        <span class="vagas-horario">5 vagas</span>
+    </button>
+    <button class="horario" onclick="selecionarHorario(this)" data-vagas="2">
+        15:00
+        <span class="vagas-horario">2 vagas</span>
+    </button>
+    <button class="horario indisponivel" disabled data-vagas="0">
+        16:00
+        <span class="vagas-horario">esgotado</span>
+    </button>
+</div>
         <p class="legenda">
             <span class="leg-item">
                 <span class="leg-cor vermelho"></span> Selecionado

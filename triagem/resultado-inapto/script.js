@@ -1,45 +1,67 @@
-// Mostra os motivos do impedimento vindos do triagem.js
-const MOTIVOS = {
-    pergunta1: 'Peso abaixo de 50 kg',
-    pergunta2: 'Fora da faixa etária (16 a 69 anos)',
-    pergunta3: 'Menos de 6 horas de sono nas últimas 24h',
-    pergunta4: 'Gripe ou resfriado nas últimas 2 semanas',
-    pergunta5: 'Tatuagem nos últimos 12 meses',
-    pergunta6: 'Grávida ou amamentando',
-    pergunta7: 'Em uso de antibióticos ou medicamentos',
-    pergunta8: 'Cirurgia nos últimos 6 meses'
-};
+// ============================================================
+// RESULTADO INAPTO — script.js
+// ============================================================
 
-const RESPOSTAS_RUINS = {
-    pergunta1: 'nao',
-    pergunta2: 'nao',
-    pergunta3: 'nao',
-    pergunta4: 'sim',
-    pergunta5: 'sim',
-    pergunta6: 'sim',
-    pergunta7: 'sim',
-    pergunta8: 'sim'
-};
+// ------------------------------------------------------------
+// 1. PREENCHER NOME DO USUÁRIO
+// ------------------------------------------------------------
+const nome    = localStorage.getItem('nome');
+const usuario = localStorage.getItem('usuario');
+const nomeEl  = document.querySelector('.nome-doador');
+
+if (nomeEl) {
+    const primeiroNome = (nome || usuario || 'Você').split(' ')[0];
+    nomeEl.textContent = `${primeiroNome}, não se preocupe!`;
+}
+
+// ------------------------------------------------------------
+// 2. FOTO DO USUÁRIO
+// ------------------------------------------------------------
+const fotoSalva = localStorage.getItem('fotoPerfil');
+const fotoEl    = document.querySelector('.foto-wrapper img');
+
+if (fotoSalva && fotoEl) {
+    fotoEl.src = fotoSalva;
+}
+
+// ------------------------------------------------------------
+// 3. PREENCHER MOTIVOS DO IMPEDIMENTO
+// ------------------------------------------------------------
+const impedimentos = JSON.parse(
+    localStorage.getItem('impedimentos') || '[]'
+);
 
 const lista = document.getElementById('listaMotivos');
 
 if (lista) {
-    let encontrou = false;
-    for (const [chave, respostaRuim] of Object.entries(RESPOSTAS_RUINS)) {
-        if (localStorage.getItem(chave) === respostaRuim) {
-            encontrou = true;
-            lista.innerHTML += `
-                <div class="motivo-item">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    ${MOTIVOS[chave]}
-                </div>`;
-        }
-    }
-    if (!encontrou) {
+    if (impedimentos.length > 0) {
+        lista.innerHTML = impedimentos.map(m => `
+            <div class="motivo-item">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                ${m}
+            </div>
+        `).join('');
+    } else {
         lista.innerHTML = `
             <div class="motivo-item">
                 <i class="fa-solid fa-circle-info"></i>
                 Algumas respostas indicam que você deve aguardar antes de doar.
             </div>`;
     }
+}
+
+// ------------------------------------------------------------
+// 4. NAVEGAÇÃO
+// ------------------------------------------------------------
+function refazerTriagem() {
+    // Limpa respostas anteriores
+    const chaves = ['peso','idade','sono','saude','tatuagem','gravidez','medicamentos','final'];
+    chaves.forEach(c => localStorage.removeItem(c));
+    localStorage.removeItem('impedimentos');
+
+    window.location.href = '../pre-triagem/pergunta1.html';
+}
+
+function voltarInicio() {
+    window.location.href = '../../perfis/pessoa/index.html';
 }

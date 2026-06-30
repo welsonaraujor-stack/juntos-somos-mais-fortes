@@ -124,3 +124,6 @@ Mesmo quando uma pessoa não puder doar sangue, ela continuará tendo espaço pa
 **"Juntos Somos Mais Fortes."**
 
 *"A tecnologia aproxima pessoas. A solidariedade salva vidas."*
+
+
+
