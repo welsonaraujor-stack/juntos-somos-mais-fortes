@@ -13,139 +13,89 @@
 
     <header>
         <div class="perfil">
-            <img src="https://i.pravatar.cc/150?img=12">
+            <img src="https://i.pravatar.cc/150?img=12" id="fotoPerfil">
         </div>
         <div class="notificacao">
             <i class="fa-regular fa-bell"></i>
             <span></span>
         </div>
     </header>
-    <!-- ===========================
-     BOAS-VINDAS
-=========================== -->
-
-<div class="boas-vindas">
-
-    <h2 id="saudacao"></h2>
-
-    <span id="cargo"></span>
-
-    <p id="mensagem"></p>
-
-    </div>
-   
 
     <section class="titulo">
-        <h1>
-            <i class="fa-solid fa-gift"></i>
-            Benefícios
-        </h1>
-        <p>Uma forma de agradecer por ajudar a salvar vidas.❤️</p>
+        <h1><i class="fa-solid fa-gift"></i>Reconhecimento </h1>
+        <p>Empresas parceiras reconhecem quem ajuda a salvar vidas.</p>
     </section>
 
     <section class="banner">
         <div class="gift">🎁</div>
         <div>
-            <h2>❤️ Você salva vidas.
-            Essas empresas decidiram agradecer pelo seu gesto.</h2>
+            <h2>Você escolheu salvar vidas.
+
+            A comunidade faz questão de agradecer esse gesto..</h2>
         </div>
     </section>
 
     <section class="categorias">
-        <button class="categoria ativa">
+        <button class="categoria ativa" data-cat="todos">
             <i class="fa-solid fa-bullseye"></i>
             <span>Todos</span>
         </button>
-        <button class="categoria">
+        <button class="categoria" data-cat="saude">
             <i class="fa-solid fa-heart-pulse"></i>
             <span>Saúde</span>
         </button>
-        <button class="categoria">
+        <button class="categoria" data-cat="educacao">
             <i class="fa-solid fa-graduation-cap"></i>
             <span>Educação</span>
         </button>
-        <button class="categoria">
+        <button class="categoria" data-cat="cultura">
             <i class="fa-solid fa-masks-theater"></i>
             <span>Cultura</span>
         </button>
-        <button class="categoria">
+        <button class="categoria" data-cat="servicos">
             <i class="fa-solid fa-gear"></i>
             <span>Serviços</span>
         </button>
+        <button class="categoria" data-cat="alimentacao">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Alimentação</span>
+        </button>
     </section>
 
-    <section class="beneficios">
-        <p class="beneficios-titulo">❤️ Empresas que agradecem sua doação</p>
+    <!-- TÍTULO DA LISTA -->
+    <p class="beneficios-titulo">❤️ Empresas que agradecem sua doação</p>
 
-        <div class="card">
-            <div class="desconto">
-                10%
-                <span class="off">OFF</span>
-            </div>
-            <div class="info">
-                <h3>Rápido Farma</h3>
-                <p>Ganhe 10% de desconto em medicamentos.</p>
-            </div>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-
-        <div class="card">
-            <div class="desconto verde">
-                20%
-                <span class="off">OFF</span>
-            </div>
-            <div class="info">
-                <h3>Academia Saúde</h3>
-                <p>20% de desconto na mensalidade em unidades parceiras.</p>
-            </div>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-
-        <div class="card">
-            <div class="desconto azul">
-                15%
-                <span class="off">OFF</span>
-            </div>
-            <div class="info">
-                <h3>Óticas Visão</h3>
-                <p>15% de desconto em óculos de grau e solares.</p>
-            </div>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-
-        <div class="card">
-            <div class="gratis">GRÁTIS</div>
-            <div class="info">
-                <h3>Ingresso Solidário</h3>
-                <p>Ingressos gratuitos ou com desconto em eventos e cinemas.</p>
-            </div>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-
+    <!-- LISTA GERADA PELO JS -->
+    <section class="beneficios" id="listaBeneficios">
     </section>
 
-    
+    <!-- BOTÃO VER TODAS -->
+    <button id="btnVerTodas" style="display:none">
+        Ver todos os benefícios →
+    </button>
+
     <nav>
-        <button id="btnInicio">
+        <button onclick="inicio()">
             <i class="fa-solid fa-house"></i>
             <span>Início</span>
         </button>
-        <button id="btnAgendar">
+        <button>
             <i class="fa-regular fa-calendar-days"></i>
             <span>Agendar</span>
         </button>
-        <button id="btnDoacoes">
-            <i class="fa-regular fa-heart"></i>
+        <button>
+            <i class="fa-solid fa-droplet"></i>
             <span>Doações</span>
         </button>
-        <button id="btnImpacto" >
+        <button>
             <i class="fa-solid fa-trophy"></i>
-            <span>impacto</span>
+            <span>Impacto</span>
         </button>
-        <button id="btnBeneficios " class="ativo-nav">
-            <i class="fa-regular fa-user"></i>
-            <span>Benefícios</span>
+        <button class="ativo">
+            <i class="fa-solid fa-gift"></i>
+            <span>Gratidão</span>
         </button>
+        
     </nav>
 
 </div>
