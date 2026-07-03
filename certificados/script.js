@@ -45,10 +45,10 @@ document.getElementById("btnDoacoes").onclick = () => {
     window.location.href = "../../doador/impacto-social/index.html";
 };
 
-document.getElementById("btnConquistas").onclick = () => {
-    window.location.href = "../conquistas/index.html";
+document.getElementById("btnImpacto").onclick = () => {
+    window.location.href = "../../conquistas/index.html";
 };
 
-document.getElementById("btnPerfil").onclick = () => {
-    window.location.href = "../../doador/carteira-doador/index.html";
+document.getElementById("btnBeneficios").onclick = () => {
+    window.location.href = "../../beneficio/index.html";
 };

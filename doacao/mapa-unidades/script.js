@@ -63,7 +63,7 @@ botoesNav[2].onclick = () => {
 };
 
 botoesNav[3].onclick = () => {
-    window.location.href = '../../impacto/index.html';
+    window.location.href = '../../doador/impacto-social/index.html';
 };
 
 botoesNav[4].onclick = () => {
