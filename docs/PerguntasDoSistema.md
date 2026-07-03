@@ -33,4 +33,4 @@
 ## 🙋 Voluntários da Vida
 
 - [ ] Quantos voluntários participaram do evento?
-- [ ] Quantas horas foram registradas?
+- [ ] Quantas horas foram registradas? 
