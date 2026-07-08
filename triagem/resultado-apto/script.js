@@ -11,7 +11,7 @@ const nomeEl  = document.querySelector('.nome-doador');
 
 if (nomeEl) {
     const primeiroNome = (nome || usuario || 'Você').split(' ')[0];
-    nomeEl.textContent = `${primeiroNome}, você está apto!`;
+    nomeEl.textContent = `${primeiroNome}, sua pré-triagem foi concluída com sucesso!`;
 }
 
 // ------------------------------------------------------------
