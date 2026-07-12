@@ -18,3 +18,23 @@ CREATE TABLE usuarios (
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
+CREATE TABLE perguntas_triagem(
+id SERIAL PRIMARY KEY,
+pergunta VARCHAR(250) NOT NULL,
+resposta_esperada VARCHAR(3) NOT NULL
+	CHECK (resposta_esperada IN ('Sim','Não')),/* isso é para ter apenas duas opções */
+ordem INTEGER NOT NULL,
+ativa BOOLEAN NOT NULL DEFAULT TRUE,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+CREATE TABLE respostas_triagem(
+id SERIAL PRIMARY KEY,
+usuario_id INTEGER NOT NULL,
+pergunta_id INTEGER NOT NULL,
+resposta VARCHAR(3) NOT NULL CHECK (resposta IN ('Sim','Não')),
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+FOREIGN KEY (pergunta_id) REFERENCES perguntas_triagem(id));

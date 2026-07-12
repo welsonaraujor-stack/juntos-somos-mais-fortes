@@ -11,3 +11,14 @@ VALUES('Carlos Souza','345.678.901-23','carlos.souza@email.com','(21) 98888-1122
 ('Bruno Carvalho','147.258.369-10','bruno.carvalho@email.com','(81) 90000-5566','1987-05-28','Masculino','50000-000','Rua do Sol','420',NULL,'Boa Vista','Recife','PE','bruno.jpg','B+'),
 ('Patrícia Mendes','258.369.147-21','patricia.mendes@email.com','(98) 98877-6655','1991-10-03','Feminino','65000-000','Av. dos Holandeses','150','Torre A','Calhau','São Luís','MA','patricia.jpg','A-'),
 ('Gustavo Ribeiro','369.147.258-32','gustavo.ribeiro@email.com','(92) 97766-5544','1996-12-11','Masculino','69000-000','Rua Amazonas','310',NULL,'Adrianópolis','Manaus','AM','gustavo.jpg','O+');
+
+
+INSERT INTO perguntas_triagem(pergunta,resposta_esperada,ordem)
+VALUES('Você pesa mais de 50kg?','Sim',1),
+('Você realizou alguma doação de sangue nos últimos 60 dias?','Sim',2),
+('Dormiu pelo menos 6 horas nas últimas 24 horas?','Sim',3),
+('Teve gripe ou resfriado nas últimas 2 semanas?','Não',4),
+('Fez tatuagem nos últimos 12 meses?','Não',5),
+('Está grávida ou amamentando?','Não',6),
+('Está tomando antibióticos ou outros medicamentos?','Não',7),
+('Realizou alguma cirurgia nos últimos 6 meses?','Não',8);
