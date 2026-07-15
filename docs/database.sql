@@ -38,3 +38,23 @@ resposta VARCHAR(3) NOT NULL CHECK (resposta IN ('Sim','Não')),
 created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
 FOREIGN KEY (pergunta_id) REFERENCES perguntas_triagem(id));
+
+SELECT * FROM respostas_triagem; 
+ALTER TABLE respostas_triagem ADD COLUMN triagem_id INTEGER;
+
+CREATE TABLE triagens (
+id SERIAL PRIMARY KEY,
+usuario_id INTEGER NOT NULL,
+data_triagem TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+resultado VARCHAR(10) NOT NULL CHECK (resultado IN ('Apto','Não Apto')),
+quantidade_impedimentos INTEGER DEFAULT 0,
+receber_lembrete BOOLEAN DEFAULT FALSE,
+proxima_tentativa DATE,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (usuario_id) REFERENCES usuarios(id));
+
+ALTER TABLE respostas_triagem ADD CONSTRAINT fk_triagem FOREIGN KEY (triagem_id) REFERENCES triagens(id);
+SELECT * FROM respostas_triagem;
+
+
