@@ -42,6 +42,9 @@ FOREIGN KEY (pergunta_id) REFERENCES perguntas_triagem(id));
 SELECT * FROM respostas_triagem; 
 ALTER TABLE respostas_triagem ADD COLUMN triagem_id INTEGER;
 
+ALTER TABLE respostas_triagem ADD CONSTRAINT fk_triagem FOREIGN KEY (triagem_id) REFERENCES triagens(id);
+
+
 CREATE TABLE triagens (
 id SERIAL PRIMARY KEY,
 usuario_id INTEGER NOT NULL,
@@ -54,7 +57,5 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (usuario_id) REFERENCES usuarios(id));
 
-ALTER TABLE respostas_triagem ADD CONSTRAINT fk_triagem FOREIGN KEY (triagem_id) REFERENCES triagens(id);
-SELECT * FROM respostas_triagem;
 
 

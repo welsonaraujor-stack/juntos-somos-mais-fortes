@@ -22,3 +22,18 @@ VALUES('Você pesa mais de 50kg?','Sim',1),
 ('Está grávida ou amamentando?','Não',6),
 ('Está tomando antibióticos ou outros medicamentos?','Não',7),
 ('Realizou alguma cirurgia nos últimos 6 meses?','Não',8);
+
+INSERT INTO respostas_triagem(triagem_id, usuario_id, pergunta_id,resposta)
+VALUES(2,2,1,'Sim'),
+(2,2,2,'Sim'),
+(2,2,3,'Sim'),
+(2,2,4,'Não'),
+(2,2,5,'Não'),
+(2,2,6,'Não'),
+(2,2,7,'Não'),
+(2,2,8,'Não');
+
+INSERT INTO triagens
+(usuario_id, resultado, quantidade_impedimentos, receber_lembrete)
+VALUES
+(2,'Apto',0,FALSE);
