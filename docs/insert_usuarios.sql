@@ -37,3 +37,16 @@ INSERT INTO triagens
 (usuario_id, resultado, quantidade_impedimentos, receber_lembrete)
 VALUES
 (2,'Apto',0,FALSE);
+
+
+INSERT INTO unidades (nome,tipo,placa,capacidade,telefone,email)
+VALUES
+('Unidade móvel Esperança','Ônibus','QWE1A23','6','(11)99998-9999','onibusesperança@org.com.br'),
+('Unidade móvel Vida','Ônibus','JES3633','6','(11)99333-3333','onibusvida@org.com.br'),
+('Unidade móvel Solidariedade','Ônibus','WEL936E','6','(11)99666-666','onibussolidariedade@org.com.br'),
+('Van Especializada','Van','LIF1YU0','2','(11)99555-5555','van@org.com.br'),
+('Hemocentro Regional','Hemocentro',NULL,'15','(11)99777-7777)','hemocentroregional@org.com.br'),
+('Hemocentro Central','Hemocentro',NULL,'20','(11)99222-2222)','hemocentrocentro@org.com.br');
+
+
+

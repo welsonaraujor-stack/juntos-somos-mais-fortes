@@ -58,4 +58,26 @@ updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (usuario_id) REFERENCES usuarios(id));
 
 
+SELECT usuarios.nome,perguntas_triagem.pergunta,
+respostas_triagem.resposta
 
+FROM usuarios
+INNER JOIN triagens ON usuarios.id = triagens.usuario_id
+INNER JOIN respostas_triagem ON triagens.id = respostas_triagem.triagem_id
+INNER JOIN perguntas_triagem ON respostas_triagem.pergunta_id = perguntas_triagem.id;
+
+
+
+CREATE TABLE unidades(
+id SERIAL PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+tipo VARCHAR(20) NOT NULL CHECK (tipo IN('Ônibus','Van','Hemocentro')),
+placa VARCHAR(10) UNIQUE,
+capacidade INTEGER NOT NULL CHECK (capacidade > 0),
+telefone VARCHAR(20),
+email VARCHAR(100),
+foto_url TEXT,
+status VARCHAR(15) NOT NULL DEFAULT 'Ativa' CHECK (status IN ('Ativa','Manutenção','Inativa')),
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
