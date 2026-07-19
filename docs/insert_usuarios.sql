@@ -50,3 +50,11 @@ VALUES
 
 
 
+INSERT INTO campanhas
+(unidade_id, nome, tipo, data, hora_inicio, hora_fim, cep, endereco, numero, bairro, cidade, estado, vagas_totais)
+
+VALUES
+(7,'Campanha Shopping Partage','Pública','2026-08-01','08:00','17:00','68515-000','Rodovia PA-275','100','Nova Carajás','Parauapebas','PA',50),
+(7,'Campanha Praça dos Metais','Pública','2026-08-08','08:00','17:00','68515-000','Praça dos Metais','S/N','Centro','Parauapebas','PA',60),
+(10,'Campanha O+ Região Norte','Direcionada','2026-08-10','08:00','16:00','68515-000','Atendimento Domiciliar','S/N','Cidade Nova','Parauapebas','PA',5),
+(11,'Coleta Hemocentro Regional','Pública','2026-08-03','07:00','18:00','68515-000','Rua das Flores','150','Centro','Parauapebas','PA',80);

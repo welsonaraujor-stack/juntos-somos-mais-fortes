@@ -74,10 +74,43 @@ nome VARCHAR(50) NOT NULL,
 tipo VARCHAR(20) NOT NULL CHECK (tipo IN('Ônibus','Van','Hemocentro')),
 placa VARCHAR(10) UNIQUE,
 capacidade INTEGER NOT NULL CHECK (capacidade > 0),
-telefone VARCHAR(20),
+telefo ne VARCHAR(20),
 email VARCHAR(100),
 foto_url TEXT,
 status VARCHAR(15) NOT NULL DEFAULT 'Ativa' CHECK (status IN ('Ativa','Manutenção','Inativa')),
 created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE campanhas(
+id SERIAL PRIMARY KEY,
+unidade_id INTEGER NOT NULL,
+nome VARCHAR(150) NOT NULL,
+tipo VARCHAR(20) NOT NULL
+CHECK (tipo IN ('Pública','Direcionada')),
+data DATE NOT NULL,
+hora_inicio TIME NOT NULL,
+hora_fim TIME NOT NULL,
+cep VARCHAR(9),
+endereco VARCHAR(150) NOT NULL,
+numero VARCHAR(10),
+complemento VARCHAR(100),
+bairro VARCHAR(100),
+cidade VARCHAR(100) NOT NULL,
+estado CHAR(2) NOT NULL,
+latitude DECIMAL(10,8),
+longitude DECIMAL(11,8),
+vagas_totais INTEGER NOT NULL
+CHECK (vagas_totais > 0),
+vagas_ocupadas INTEGER NOT NULL DEFAULT 0
+CHECK (vagas_ocupadas >= 0),
+status VARCHAR(20) NOT NULL
+DEFAULT 'Agendada'
+CHECK (status IN('Agendada','Em andamento','Finalizada','Cancelada')),
+observacoes TEXT,
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (unidade_id)
+REFERENCES unidades(id)
+
 );
