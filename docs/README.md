@@ -187,6 +187,7 @@ O objetivo do projeto é:
 - Aproximar comunidades das campanhas;
 - Reduzir períodos de escassez de bolsas;
 - Apoiar hospitais e hemocentros;
+- saber sua intenção em vida (doação de orgãos)
 - Salvar vidas através da colaboração.
 
 ---
@@ -197,14 +198,83 @@ O objetivo do projeto é:
 
 Atualmente estamos construindo:
 
-- Documentação
-- Protótipos
-- Telas da aplicação
-- Estrutura inicial do sistema
+## 📋 Planejamento
+- [x] Definição da ideia do projeto
+- [x] Definição da missão e objetivos
+- [x] Levantamento dos requisitos
+- [x] Regras de negócio
+- [x] Estrutura da documentação
 
 ---
 
-# Missão
+## 🎨 Interface (Front-end)
+- [x] Tela de Login
+- [x] Tela de Cadastro
+- [x] Tela "Quem é Você?"
+- [x] Pré-triagem
+- [x] Resultado Apto
+- [x] Resultado Não Apto
+- [x] Agendamento
+- [x] Confirmação do Agendamento
+- [x] Histórico de Doações
+- [x] Perfil do Doador
+- [x] Benefícios
+- [x] Conquistas
+- [x] Certificados
+- [x] Impacto Social
+- [x] Navegação entre telas
+
+---
+
+## 🗄️ Banco de Dados
+- [x] Modelagem inicial
+- [x] Criação das tabelas
+- [x] Relacionamentos
+- [x] Inserção de dados fictícios
+- [x] Pré-triagem
+- [ ] Finalizar estrutura completa
+- [ ] Procedures e Functions
+- [ ] Views
+- [ ] Triggers
+
+---
+
+## 🔗 Integração
+- [ ] Conectar Front-end ao PostgreSQL
+- [ ] Migrar banco para Supabase
+- [ ] Sistema de autenticação
+- [ ] Upload de imagens
+- [ ] Integração com mapas
+- [ ] Notificações
+
+---
+
+## 📊 Painéis
+- [ ] Dashboard Administrativo
+- [ ] Dashboard do Parceiro
+- [ ] Dashboard da Instituição
+- [ ] Dashboard do Hemocentro
+
+---
+
+## 🧪 Testes
+- [ ] Testes do banco
+- [ ] Testes das telas
+- [ ] Testes de integração
+- [ ] Testes de usabilidade
+
+---
+
+## 🚀 MVP
+- [ ] Publicação da primeira versão
+  
+
+## Recursos
+
+  Os recursos arrecadados pelo projeto vão ser disponibilizado ao apoio de hospitais públicos, hemocentros, universidades, institutos de pesquisa e projetos voltados ao tratamento e à pesquisa de doenças raras, além de outras iniciativas que promovam a saúde pública. Toda destinação de recursos será realizada com total transparência, mediante prestação de contas pública e critérios previamente definidos.
+
+
+# Missão Recursos
 
 Juntos Somos Mais Fortes.
 

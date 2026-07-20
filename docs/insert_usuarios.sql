@@ -58,3 +58,23 @@ VALUES
 (7,'Campanha Praça dos Metais','Pública','2026-08-08','08:00','17:00','68515-000','Praça dos Metais','S/N','Centro','Parauapebas','PA',60),
 (10,'Campanha O+ Região Norte','Direcionada','2026-08-10','08:00','16:00','68515-000','Atendimento Domiciliar','S/N','Cidade Nova','Parauapebas','PA',5),
 (11,'Coleta Hemocentro Regional','Pública','2026-08-03','07:00','18:00','68515-000','Rua das Flores','150','Centro','Parauapebas','PA',80);
+
+INSERT INTO agendamentos(usuario_id, campanha_id)
+VALUES (2,1),
+(3,1),
+(4,2),
+(5,3);
+
+INSERT INTO tipos_sanguineos
+(grupo,fator_rh,descricao)
+
+VALUES
+('A','+','A+'),
+('A','-','A-'),
+('B','+','B+'),
+('B','-','B-'),
+('AB','+','AB+'),
+('AB','-','AB-'),
+('O','+','O+'),
+('O','-','O-');
+

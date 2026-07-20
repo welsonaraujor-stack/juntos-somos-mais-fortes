@@ -18,6 +18,16 @@ CREATE TABLE usuarios (
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
+ALTER TABLE usuarios
+ADD COLUMN tipo_sanguineo_id INTEGER;
+
+ALTER TABLE usuarios
+ADD CONSTRAINT fk_usuario_tipo_sanguineo
+FOREIGN KEY (tipo_sanguineo_id)
+REFERENCES tipos_sanguineos(id);
+
+
+
 CREATE TABLE perguntas_triagem(
 id SERIAL PRIMARY KEY,
 pergunta VARCHAR(250) NOT NULL,
@@ -112,5 +122,80 @@ created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (unidade_id)
 REFERENCES unidades(id)
+
+);
+
+CREATE TABLE agendamentos(
+id SERIAL PRIMARY KEY,
+usuario_id INTEGER NOT NULL,
+campanha_id INTEGER NOT NULL,
+data_agendamento TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+status VARCHAR(20) NOT NULL DEFAULT 'Agendado' CHECK (status in( 'Agendado','Confirmado','Cancelado','Compareceu','Não Compareceu')),
+observacoes TEXT,
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+FOREIGN KEY (campanha_id) REFERENCES campanhas(id)
+);
+
+CREATE TABLE tipos_sanguineos(
+    id SERIAL PRIMARY KEY,
+    grupo VARCHAR(2) NOT NULL
+    CHECK (grupo IN ('A','B','AB','O')),
+    fator_rh CHAR(1) NOT NULL
+    CHECK (fator_rh IN ('+','-')),
+    descricao VARCHAR(3) NOT NULL UNIQUE
+
+);
+
+CREATE TABLE doacoes(
+
+    id SERIAL PRIMARY KEY,
+
+    usuario_id INTEGER NOT NULL,
+
+    campanha_id INTEGER NOT NULL,
+
+    agendamento_id INTEGER NOT NULL,
+
+    data_doacao DATE NOT NULL,
+
+    quantidade_ml INTEGER NOT NULL
+    CHECK (quantidade_ml > 0),
+
+    tipo_sanguineo VARCHAR(3) NOT NULL,
+
+    fator_rh CHAR(1) NOT NULL
+    CHECK (fator_rh IN ('+','-')),
+
+    status VARCHAR(20) NOT NULL
+    DEFAULT 'Realizada'
+    CHECK (
+        status IN
+        (
+            'Realizada',
+            'Cancelada',
+            'Interrompida'
+        )
+    ),
+
+    observacoes TEXT,
+
+    proxima_doacao DATE,
+
+    created_at TIMESTAMP NOT NULL
+    DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP NOT NULL
+    DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (usuario_id)
+        REFERENCES usuarios(id),
+
+    FOREIGN KEY (campanha_id)
+        REFERENCES campanhas(id),
+
+    FOREIGN KEY (agendamento_id)
+        REFERENCES agendamentos(id)
 
 );
