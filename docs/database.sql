@@ -199,3 +199,41 @@ CREATE TABLE doacoes(
         REFERENCES agendamentos(id)
 
 );
+CREATE TABLE conquistas(
+id SERIAL PRIMARY KEY,
+nome VARCHAR(100) NOT NULL UNIQUE,
+descricao TEXT NOT NULL,
+icone VARCHAR(100),
+quantidade_doacoes INTEGER,
+quantidade_vidas INTEGER,
+ativa BOOLEAN NOT NULL DEFAULT TRUE,
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+
+
+CREATE TABLE usuario_conquistas(
+id SERIAL PRIMARY KEY,
+usuario_id INTEGER NOT NULL,
+conquista_id INTEGER NOT NULL,
+data_conquista TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY(usuario_id)
+REFERENCES usuarios(id),
+FOREIGN KEY(conquista_id)
+REFERENCES conquistas(id),
+UNIQUE(usuario_id, conquista_id));
+
+CREATE TABLE beneficios(
+id SERIAL PRIMARY KEY,
+empresa VARCHAR(100) NOT NULL,
+titulo VARCHAR(150) NOT NULL,
+descricao TEXT NOT NULL,
+categoria VARCHAR(50) NOT NULL,
+desconto VARCHAR(50),
+quantidade_total INTEGER,
+quantidade_disponivel INTEGER,
+data_inicio DATE,
+data_fim DATE,
+ativo BOOLEAN NOT NULL DEFAULT TRUE,
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);
+
