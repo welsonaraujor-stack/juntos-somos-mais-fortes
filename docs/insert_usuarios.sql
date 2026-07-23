@@ -24,20 +24,44 @@ VALUES('Você pesa mais de 50kg?','Sim',1),
 ('Realizou alguma cirurgia nos últimos 6 meses?','Não',8);
 
 INSERT INTO respostas_triagem(triagem_id, usuario_id, pergunta_id,resposta)
-VALUES(2,2,1,'Sim'),
-(2,2,2,'Sim'),
-(2,2,3,'Sim'),
-(2,2,4,'Não'),
-(2,2,5,'Não'),
-(2,2,6,'Não'),
-(2,2,7,'Não'),
-(2,2,8,'Não');
+VALUES(2,2,1,'Sim'),(2,2,2,'Sim'),(2,2,3,'Sim'),(2,2,4,'Não'),(2,2,5,'Não'),(2,2,6,'Não'),(2,2,7,'Não'),(2,2,8,'Não');
+(3,3,1,'Sim'),(3,3,2,'Sim'),(3,3,3,'Sim'),(3,3,4,'Não'),(3,3,5,'Sim'),(3,3,6,'Não'),(3,3,7,'Não'),(3,3,8,'Sim');
+(4,4,1,'Sim'),(4,4,2,'Sim'),(4,4,3,'Sim'),(4,4,4,'Não'),(4,4,5,'Sim'),(4,4,6,'Não'),(4,4,7,'Não'),(4,4,8,'Sim');
+(5,5,1,'Sim'),(5,5,2,'Sim'),(5,5,3,'Sim'),(5,5,4,'Não'),(5,5,5,'Sim'),(5,5,6,'Não'),(5,5,7,'Não'),(5,5,8,'Sim');
+(6,6,1,'Sim'),(6,6,2,'Sim'),(6,6,3,'Sim'),(6,6,4,'Não'),(6,6,5,'Sim'),(6,6,6,'Não'),(6,6,7,'Não'),(6,6,8,'Sim');
+(7,7,1,'Sim'),(7,7,2,'Sim'),(7,7,3,'Sim'),(7,7,4,'Não'),(7,7,5,'Sim'),(7,7,6,'Não'),(7,7,7,'Não'),(7,7,8,'Sim');
+(8,8,1,'Sim'),(8,8,2,'Sim'),(8,8,3,'Sim'),(8,8,4,'Não'),(8,8,5,'Não'),(8,8,6,'Não'),(8,8,7,'Não'),(8,8,8,'Não');
+(9,9,1,'Sim'),(9,9,2,'Sim'),(9,9,3,'Sim'),(9,9,4,'Não'),(9,9,5,'Não'),(9,9,6,'Não'),(9,9,7,'Não'),(9,9,8,'Não');
+(10,10,1,'Sim'),(10,10,2,'Sim'),(10,10,3,'Sim'),(10,10,4,'Não'),(10,10,5,'Não'),(10,10,6,'Não'),(10,10,7,'Não'),(10,10,8,'Não');
+(11,11,1,'Sim'),(11,11,2,'Sim'),(11,11,3,'Sim'),(11,11,4,'Não'),(11,11,5,'Não'),(11,11,6,'Não'),(11,11,7,'Não'),(11,11,8,'Não');
+(12,12,1,'Sim'),(12,12,2,'Não'),(12,12,3,'Sim'),(12,12,4,'Sim'),(12,12,5,'Não'),(12,12,6,'Não'),(12,12,7,'Não'),(12,12,8,'Não');
+
 
 INSERT INTO triagens
 (usuario_id, resultado, quantidade_impedimentos, receber_lembrete)
 VALUES
 (2,'Apto',0,FALSE);
+INSERT INTO triagens (usuario_id, resultado)
+VALUES
+(2, 'Apto'),
+(3, 'Não Apto'),
+(4, 'Apto'),
+(5, 'Apto'),
+(6, 'Não Apto'),
+(7, 'Apto'),
+(8, 'Apto'),
+(9, 'Não Apto'),
+(10, 'Apto'),
+(11, 'Apto'),
+(12, 'Não Apto');
 
+INSERT INTO triagens (usuario_id, resultado)
+VALUES
+(4, 'Apto');
+
+INSERT INTO triagens (usuario_id, resultado)
+VALUES
+(4, 'Apto');
 
 INSERT INTO unidades (nome,tipo,placa,capacidade,telefone,email)
 VALUES

@@ -151,23 +151,15 @@ CREATE TABLE tipos_sanguineos(
 CREATE TABLE doacoes(
 
     id SERIAL PRIMARY KEY,
-
     usuario_id INTEGER NOT NULL,
-
     campanha_id INTEGER NOT NULL,
-
     agendamento_id INTEGER NOT NULL,
-
     data_doacao DATE NOT NULL,
-
     quantidade_ml INTEGER NOT NULL
     CHECK (quantidade_ml > 0),
-
     tipo_sanguineo VARCHAR(3) NOT NULL,
-
     fator_rh CHAR(1) NOT NULL
     CHECK (fator_rh IN ('+','-')),
-
     status VARCHAR(20) NOT NULL
     DEFAULT 'Realizada'
     CHECK (
@@ -175,26 +167,19 @@ CREATE TABLE doacoes(
         (
             'Realizada',
             'Cancelada',
-            'Interrompida'
+           'Interrompida'
         )
     ),
-
     observacoes TEXT,
-
     proxima_doacao DATE,
-
     created_at TIMESTAMP NOT NULL
     DEFAULT CURRENT_TIMESTAMP,
-
     updated_at TIMESTAMP NOT NULL
     DEFAULT CURRENT_TIMESTAMP,
-
     FOREIGN KEY (usuario_id)
         REFERENCES usuarios(id),
-
     FOREIGN KEY (campanha_id)
         REFERENCES campanhas(id),
-
     FOREIGN KEY (agendamento_id)
         REFERENCES agendamentos(id)
 
